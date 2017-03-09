@@ -25,8 +25,7 @@
 - Bücher sich anschauen
 
 ## Kursinhalte:
-
-- https://bitbucket.org/ccjavad/wcd_114058.git
+- https://github.com/ccjavad/wcd_114058
 
 ## Git mit Netbeans:
 - Nur einmal das Repo clonen: Team/Git/Clone...
