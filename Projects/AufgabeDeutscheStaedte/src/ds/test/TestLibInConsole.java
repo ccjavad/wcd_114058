@@ -1,5 +1,8 @@
 package ds.test;
 
+import ds.JSoupParser;
+import ds.Parser;
+import ds.Stadt;
 import ds.TextIO;
 import java.io.File;
 import java.util.List;
@@ -20,13 +23,14 @@ public class TestLibInConsole {
 //        TextIO.save(htmlText, file, CHARSET);
         
         htmlText = TextIO.load(file);
-        
 
-//        Parser parser = new ???;
-//        
-//        List<Stadt> list = parser.parse(htmlText);
-//        
-//        System.out.println("geparst: " + list.size());
+        
+        Parser parser = new JSoupParser();
+//        Parser parser = new RegexParser();
+        
+        List<Stadt> list = parser.parse(htmlText);
+        
+        System.out.println("geparst: " + list.size());
         
         
     }
