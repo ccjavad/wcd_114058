@@ -30,9 +30,11 @@ public class TestLibInConsole {
         
         List<Stadt> list = parser.parse(htmlText);
         
-        System.out.println("geparst: " + list.size());
+        for (Stadt stadt : list) {
+            System.out.println(stadt);
+        }
         
-        
+        System.out.println("--> geparst: " + list.size());
     }
     
 }

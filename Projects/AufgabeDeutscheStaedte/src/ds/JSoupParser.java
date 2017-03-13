@@ -33,7 +33,25 @@ public class JSoupParser implements Parser {
     }
 
     private Stadt parse(Element zeile) {
-        return null;
+        
+//        System.out.println(zeile);
+        Elements alleSpalten = zeile.getElementsByTag("td");
+        
+        Element spalteName = alleSpalten.get(1);
+        Element anchorMitNamen = spalteName.getElementsByTag("a").first();
+        String name = anchorMitNamen.text();
+        
+        Element spalteEinwohner = alleSpalten.get(10);
+        String einwohnerText = spalteEinwohner.ownText();
+        einwohnerText = einwohnerText.replace(".", "");
+        
+        int einwohner = Integer.parseInt(einwohnerText);
+        
+        Element spalteLand = alleSpalten.get(15);
+        Element anchorMitLand = spalteLand.getElementsByTag("a").last();
+        String land = anchorMitLand.text();
+        
+        return new Stadt(name, land, einwohner);
     }
     
 }

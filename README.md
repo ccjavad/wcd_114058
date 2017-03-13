@@ -21,9 +21,6 @@
 
 	Achtung!!! Tomcat bei der Installation von Netbeans mitinstallieren !!!
 
-- 2 Bücher für den Kurs abholen (falls noch nicht geschehen)
-- Bücher sich anschauen
-
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
 
