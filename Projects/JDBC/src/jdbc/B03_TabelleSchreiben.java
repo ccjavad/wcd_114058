@@ -28,8 +28,6 @@ public class B03_TabelleSchreiben {
                 
             } //hier: stm.close() im finally
             
-            
         } //hier: connection.close() im finally
-        
     }
 }

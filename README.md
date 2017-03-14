@@ -14,12 +14,9 @@
 
 ## Aufgaben:
 
+- s. Anlagen: 'HeadFirst' Buch sich anschauen
 - Verzeichnis 'Aufgaben', Datei 'DeutscheStaedte.pdf'
 
-- JDK 8 runterladen und installieren (falls nicht bereits vorhanden)
-- Netbeans für Java EE (!!!) runterladen und installieren.
-
-	Achtung!!! Tomcat bei der Installation von Netbeans mitinstallieren !!!
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

@@ -4,6 +4,8 @@ import ds.JSoupParser;
 import ds.Parser;
 import ds.Stadt;
 import ds.TextIO;
+import ds.db.MysqlStaedteDAO;
+import ds.db.StaedteDAO;
 import java.io.File;
 import java.util.List;
 
@@ -30,11 +32,16 @@ public class TestLibInConsole {
         
         List<Stadt> list = parser.parse(htmlText);
         
-        for (Stadt stadt : list) {
-            System.out.println(stadt);
-        }
-        
         System.out.println("--> geparst: " + list.size());
+        
+        StaedteDAO dao = new MysqlStaedteDAO();
+        
+        dao.insert(list);
+        System.out.println("--> Städte in die Datenbank übertragen");
+        
+        list = dao.selectAll();
+        System.out.println("--> aus der Datenbank geladen: " + list.size());
+        
     }
     
 }

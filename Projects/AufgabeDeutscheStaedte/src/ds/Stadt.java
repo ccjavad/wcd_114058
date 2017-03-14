@@ -11,6 +11,18 @@ public class Stadt {
         this.einwohner = einwohner;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLand() {
+        return land;
+    }
+
+    public int getEinwohner() {
+        return einwohner;
+    }
+
     @Override
     public String toString() {
         return "Stadt{" + "name=" + name + ", land=" + land + ", einwohner=" + einwohner + '}';
