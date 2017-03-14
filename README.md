@@ -14,8 +14,7 @@
 
 ## Aufgaben:
 
-- s. Anlagen: 'HeadFirst' Buch sich anschauen
-- Verzeichnis 'Aufgaben', Datei 'DeutscheStaedte.pdf'
+- HeadFirst-Buch, Kapitel 1
 
 
 ## Kursinhalte:
