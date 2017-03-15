@@ -16,6 +16,12 @@
 
 - HeadFirst-Buch, Kapitel 1
 - DD anlegen und welcome-files setzen
+- Html (Seiten 7-9) / https://wiki.selfhtml.org/
+- URL (Bestandteile)
+- Http, Http-Methoden (GET, POST)
+
+- Optional: Kapitel 2
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
