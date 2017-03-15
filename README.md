@@ -15,7 +15,7 @@
 ## Aufgaben:
 
 - HeadFirst-Buch, Kapitel 1
-
+- DD anlegen und welcome-files setzen
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
