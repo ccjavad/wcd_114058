@@ -14,4 +14,17 @@
         <welcome-file>index.html</welcome-file>
         <welcome-file>hallo.html</welcome-file>
     </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>Anton</servlet-name>
+        <servlet-class>svts.DateServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Anton</servlet-name>
+        <url-pattern>/date.html</url-pattern>
+        <url-pattern>/datum.php</url-pattern>
+        <url-pattern>/datum/und/zeit</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

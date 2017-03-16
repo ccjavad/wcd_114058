@@ -14,13 +14,14 @@
 
 ## Aufgaben:
 
-- HeadFirst-Buch, Kapitel 1
-- DD anlegen und welcome-files setzen
-- Html (Seiten 7-9) / https://wiki.selfhtml.org/
-- URL (Bestandteile)
+- URL
+- Request-Parameter
 - Http, Http-Methoden (GET, POST)
 
-- Optional: Kapitel 2
+- Kapitel 2
+- Ein Servlet erzeugen, das das aktuelle Server-Datum zurückliefert
+- Ein Servlet erzeugen, das eine Zufallszahl generiert und an den Client liefert
+- Optional: Das Servlet sollte wahlweise eine double oder eine int Zahl erzeugen
 
 
 ## Kursinhalte:
