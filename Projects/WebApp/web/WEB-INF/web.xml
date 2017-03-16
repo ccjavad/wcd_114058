@@ -27,4 +27,19 @@
         <url-pattern>/datum/und/zeit</url-pattern>
     </servlet-mapping>
     
+    
+    <servlet>
+        <servlet-name>Servlet-Random</servlet-name>
+        <servlet-class>svts.ServletRandomNumber</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet-Random</servlet-name>
+        <url-pattern>/random</url-pattern>
+        <!--
+        <url-pattern>/random/int</url-pattern>
+        <url-pattern>/random/double</url-pattern>
+        -->
+    </servlet-mapping>
+        
 </web-app>

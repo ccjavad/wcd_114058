@@ -21,7 +21,7 @@
 - Kapitel 2
 - Ein Servlet erzeugen, das das aktuelle Server-Datum zurückliefert
 - Ein Servlet erzeugen, das eine Zufallszahl generiert und an den Client liefert
-- Optional: Das Servlet sollte wahlweise eine double oder eine int Zahl erzeugen
+- Das Servlet sollte wahlweise eine double oder eine int Zahl erzeugen
 
 
 ## Kursinhalte:
