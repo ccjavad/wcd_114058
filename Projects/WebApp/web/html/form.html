@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <a href="target.html?userName=Tom">Request-Parameter mit einem Hyperlink</a>
+        <br/>
+        <br/>
+        
+        <form action="target.html">
+            Name: <input type="text" name="userName"/> 
+            
+            <input type="submit"/>
+        </form>
+
+        <br/>
+        <br/>
+        
+        <form action="target.html" method="post">
+            Name: <input type="text" name="userName"/> 
+            
+            <input type="submit" value="Request-Parameter mit POST senden"/>
+        </form>
+    </body>
+</html>

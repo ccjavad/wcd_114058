@@ -34,7 +34,11 @@ public class ServletRandomNumber extends HttpServlet {
         
         PrintWriter out = resp.getWriter();
         
-        out.print(value);
+        if(value==null) {
+            out.print("Falscher Wert für den Request-Parameter 'type': " + type);
+        } else {
+            out.print(value);
+        }
     }
     
     
