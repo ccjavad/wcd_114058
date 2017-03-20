@@ -3,6 +3,7 @@ package ds.web;
 import ds.JSoupParser;
 import ds.Parser;
 import ds.Stadt;
+import ds.StadtUtils;
 import ds.TextIO;
 import ds.db.MysqlStaedteDAO;
 import ds.db.StaedteDAO;
@@ -10,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -69,6 +72,28 @@ public class ServletCities extends HttpServlet {
         listStaedte = parser.parse(htmlText);
                 
         
+        String sort = request.getParameter("sort");
+        
+        Comparator<Stadt> cmp = null;
+        if(sort!=null) {
+            switch(sort) {
+                case "name":
+                    cmp = StadtUtils.CMP_NACH_NAMEN;
+                    break;
+                case "land":
+                    cmp = StadtUtils.CMP_NACH_LAND;
+                    break;
+                case "einwohner":
+                    cmp = StadtUtils.CMP_NACH_EINWOHNER;
+                    break;
+                default:
+                    //Reaktion bei falschen sort-Werten
+            }
+        }
+        
+        if(cmp!=null) {
+            Collections.sort(listStaedte, cmp);
+        }
         
 //      ------------------------
 //      Ausgeben:
@@ -90,27 +115,25 @@ public class ServletCities extends HttpServlet {
         
         out.println("<tr>");
         out.println("<th>Nr.</th>");
-        out.println("<th>Name</th>");
-        out.println("<th>Land</th>");
-        out.println("<th>Einwohner</th>");
+        out.println("<th><a href=\"cities.do?sort=name\">Name</a></th>");
+        out.println("<th><a href=\"cities.do?sort=land\">Land</a></th>");
+        out.println("<th><a href=\"cities.do?sort=einwohner\">Einwohner</a></th>");
         out.println("</tr>");
         
         for (int i = 0; i < listStaedte.size(); i++) {
-            
             Stadt s = listStaedte.get(i);
-            System.out.println(s);
-            out.println(s + "<br/>");
             
+            out.println("<tr>");
+            out.println("<td>" + (i+1) + "</td>");
+            out.println("<td>" + s.getName() + "</td>");
+            out.println("<td>" + s.getLand()+ "</td>");
+            out.println("<td>" + s.getEinwohner()+ "</td>");
+            out.println("</tr>");
         }
         
-        out.println("");
-        out.println("");
-        out.println("");
         out.println("</table>");
         out.println("</body>");
         out.println("</html>");
-        
-        
     }
     
 }

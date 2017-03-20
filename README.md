@@ -15,7 +15,12 @@
 ## Aufgaben:
 
 - AufgabeDeutscheStaedteWeb.pdf
-- Optional: Kapitel 4
+- Kapitel 4
+- Lebenszyklus eines Servlets
+- Servlet-API
+- Threads im Container?
+- Optional: ServletConfig/ServletContext
+- Optional: HTTP-Methoden
 
 
 ## Kursinhalte:
