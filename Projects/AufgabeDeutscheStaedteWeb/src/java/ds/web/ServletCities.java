@@ -24,15 +24,16 @@ public class ServletCities extends HttpServlet {
             throws ServletException, IOException {
         
         
-        StaedteDAO dao = new MysqlStaedteDAO();
-        
         List<Stadt> listStaedte = null;
 
 //      ------------------------
-//      Direkt aus der Datenbank:        
+//      Liste direkt aus der Datenbank:        
 //      ------------------------
+//        StaedteDAO dao = new MysqlStaedteDAO();
 //        try {
-//            Class.forName("org.gjt.mm.mysql.Driver");
+//            //Treiber selbst laden, die VM von Tomcat tut es nicht:
+//            Class.forName("org.gjt.mm.mysql.Driver"); 
+//
 //            listStaedte = dao.selectAll();
 //            
 //        } catch(SQLException | ClassNotFoundException e) {
@@ -42,26 +43,28 @@ public class ServletCities extends HttpServlet {
         String charset = "UTF-8";
         
 //      ---------------------------------
-//      Parsen der html aus dem Netzwerk:
+//      html aus dem Netzwerk:
 //      ---------------------------------
 //        String urlName = "https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland";
 //        String htmlText = TextIO.download(urlName, charset);
         
-
 //      ---------------------------------
-//      Parsen der html aus dem Classpath:
+//      html aus dem Classpath:
 //      ---------------------------------
 //        String htmlText = TextIO.loadFromResource("/ds/test/wiki.html", charset);
 
-
 //      ---------------------------------
-//      Parsen der html von der Festplatte:
+//      html von der Festplatte:
 //      ---------------------------------
         ServletContext context = getServletContext();
         String fileName = context.getRealPath("/WEB-INF/wiki.html");
         File file = new File(fileName);
         String htmlText = TextIO.load(file, charset);
 
+        
+//      ---------------------------------
+//      Liste parsen:
+//      ---------------------------------
         Parser parser = new JSoupParser();
         listStaedte = parser.parse(htmlText);
                 
