@@ -3,6 +3,7 @@ package svts;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,9 @@ public class ServletRandomNumber extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+//        ServletContext context = getServletContext();
+//        context.log("--> doGet / ServletRandomNumber");
         
 //        String url = req.getRequestURI();
         

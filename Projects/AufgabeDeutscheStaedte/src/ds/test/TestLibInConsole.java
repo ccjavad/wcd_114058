@@ -24,8 +24,9 @@ public class TestLibInConsole {
 
 //        TextIO.save(htmlText, file, CHARSET);
         
-        htmlText = TextIO.load(file);
+        htmlText = TextIO.load(file, CHARSET);
 
+//        htmlText = TextIO.loadFromResource( "/ds/test/wiki.html", CHARSET );
         
         Parser parser = new JSoupParser();
 //        Parser parser = new RegexParser();
@@ -34,13 +35,19 @@ public class TestLibInConsole {
         
         System.out.println("--> geparst: " + list.size());
         
-        StaedteDAO dao = new MysqlStaedteDAO();
         
-        dao.insert(list);
-        System.out.println("--> Städte in die Datenbank übertragen");
+        for (Stadt stadt : list) {
+            System.out.println(stadt);
+        }
         
-        list = dao.selectAll();
-        System.out.println("--> aus der Datenbank geladen: " + list.size());
+        
+//        StaedteDAO dao = new MysqlStaedteDAO();
+//        
+//        dao.insert(list);
+//        System.out.println("--> Städte in die Datenbank übertragen");
+//        
+//        list = dao.selectAll();
+//        System.out.println("--> aus der Datenbank geladen: " + list.size());
         
     }
     

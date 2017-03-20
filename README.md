@@ -14,14 +14,8 @@
 
 ## Aufgaben:
 
-- URL
-- Request-Parameter
-- Http, Http-Methoden (GET, POST)
-
-- Kapitel 2
-- Ein Servlet erzeugen, das das aktuelle Server-Datum zurückliefert
-- Ein Servlet erzeugen, das eine Zufallszahl generiert und an den Client liefert
-- Das Servlet sollte wahlweise eine double oder eine int Zahl erzeugen
+- AufgabeDeutscheStaedteWeb.pdf
+- Optional: Kapitel 4
 
 
 ## Kursinhalte:

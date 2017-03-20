@@ -2,6 +2,7 @@ package ds;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -52,9 +53,21 @@ public class TextIO {
         return read(isr);
     }
 
-    public static String load(File file) 
+    public static String load(File file, String charset) 
             throws FileNotFoundException, IOException {
-        return read( new FileReader(file) );
+        
+        InputStream is = new FileInputStream(file);
+        InputStreamReader isr = new InputStreamReader(is, charset);
+        
+        return read( isr );
+    }
+    
+    public static String loadFromResource(String resourceInClassPath, String charset)
+            throws IOException {
+        InputStream is = TextIO.class.getResourceAsStream(resourceInClassPath);
+        InputStreamReader isr = new InputStreamReader(is, charset);
+        
+        return read(isr);
     }
     
     public static void save(String text, File file, String charset)
