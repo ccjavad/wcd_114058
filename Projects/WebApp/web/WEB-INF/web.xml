@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	 version="3.1">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet-mapping>
+        <servlet-name>ServletLebenszyklus</servlet-name>
+        <url-pattern>/lebenszyklus</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>hallo.html</welcome-file>
     </welcome-file-list>
-    
     <servlet>
         <servlet-name>Anton</servlet-name>
         <servlet-class>svts.DateServlet</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>ServletLebenszyklus</servlet-name>
+        <servlet-class>svts.ServletLebenszyklus</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Anton</servlet-name>
         <url-pattern>/date.html</url-pattern>
         <url-pattern>/datum.php</url-pattern>
         <url-pattern>/datum/und/zeit</url-pattern>
     </servlet-mapping>
-    
-    
     <servlet>
         <servlet-name>Servlet-Random</servlet-name>
         <servlet-class>svts.ServletRandomNumber</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Servlet-Random</servlet-name>
         <url-pattern>/random</url-pattern>
@@ -41,5 +39,4 @@
         <url-pattern>/random/double</url-pattern>
         -->
     </servlet-mapping>
-        
 </web-app>

@@ -1,5 +1,3 @@
-## wcd_114058
-
 # Morgen!
 
 ## Wissensvermittlung:
@@ -18,9 +16,11 @@
 - Kapitel 4
 - Lebenszyklus eines Servlets
 - Servlet-API
-- Threads im Container?
-- Optional: ServletConfig/ServletContext
-- Optional: HTTP-Methoden
+- Request/Response - API
+- Threads im Container
+
+- ServletConfig/ServletContext
+- HTTP-Methoden (Beschreibungen aus dem Buch gut kennen)
 
 
 ## Kursinhalte:
