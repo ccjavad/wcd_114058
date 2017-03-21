@@ -8,6 +8,7 @@ import ds.TextIO;
 import ds.db.MysqlStaedteDAO;
 import ds.db.StaedteDAO;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -22,12 +23,10 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServletCities extends HttpServlet {
 
+    private List<Stadt> listStaedte = null;
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-            throws ServletException, IOException {
-        
-        
-        List<Stadt> listStaedte = null;
+    public void init() throws ServletException {
 
 //      ------------------------
 //      Liste direkt aus der Datenbank:        
@@ -62,15 +61,25 @@ public class ServletCities extends HttpServlet {
         ServletContext context = getServletContext();
         String fileName = context.getRealPath("/WEB-INF/wiki.html");
         File file = new File(fileName);
-        String htmlText = TextIO.load(file, charset);
-
+        String htmlText;
         
+        try {
+            htmlText = TextIO.load(file, charset);
+        } catch(IOException e) {
+            throw new ServletException(e);
+        }
+
 //      ---------------------------------
 //      Liste parsen:
 //      ---------------------------------
         Parser parser = new JSoupParser();
         listStaedte = parser.parse(htmlText);
-                
+    }
+    
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
         
         String sort = request.getParameter("sort");
         
@@ -91,14 +100,9 @@ public class ServletCities extends HttpServlet {
             }
         }
         
-        if(cmp!=null) {
-            Collections.sort(listStaedte, cmp);
-        }
-        
 //      ------------------------
 //      Ausgeben:
 //      ------------------------
-        
         response.setContentType("text/html;charset=UTF-8");
         
         PrintWriter out = response.getWriter();
@@ -120,15 +124,22 @@ public class ServletCities extends HttpServlet {
         out.println("<th><a href=\"cities.do?sort=einwohner\">Einwohner</a></th>");
         out.println("</tr>");
         
-        for (int i = 0; i < listStaedte.size(); i++) {
-            Stadt s = listStaedte.get(i);
-            
-            out.println("<tr>");
-            out.println("<td>" + (i+1) + "</td>");
-            out.println("<td>" + s.getName() + "</td>");
-            out.println("<td>" + s.getLand()+ "</td>");
-            out.println("<td>" + s.getEinwohner()+ "</td>");
-            out.println("</tr>");
+
+        synchronized(listStaedte) {
+            if(cmp!=null) {
+                Collections.sort(listStaedte, cmp);
+            }
+
+            for (int i = 0; i < listStaedte.size(); i++) {
+                Stadt s = listStaedte.get(i);
+
+                out.println("<tr>");
+                out.println("<td>" + (i+1) + "</td>");
+                out.println("<td>" + s.getName() + "</td>");
+                out.println("<td>" + s.getLand()+ "</td>");
+                out.println("<td>" + s.getEinwohner()+ "</td>");
+                out.println("</tr>");
+            }
         }
         
         out.println("</table>");

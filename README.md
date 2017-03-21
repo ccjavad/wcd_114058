@@ -21,6 +21,9 @@
 
 - ServletConfig/ServletContext
 - HTTP-Methoden (Beschreibungen aus dem Buch gut kennen)
+- POST ist nicht idempotent?
+
+- Umleiten (redirect) vs. Weiterleiten?
 
 
 ## Kursinhalte:
