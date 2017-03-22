@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet-mapping>
+        <servlet-name>ServletMain</servlet-name>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletITAbteilung</servlet-name>
+        <url-pattern>/abteilung/it</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <servlet>
+        <servlet-name>ServletMain</servlet-name>
+        <servlet-class>svts.ServletMain</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletITAbteilung</servlet-name>
+        <servlet-class>svts.ServletITAbteilung</servlet-class>
+        
+        <!-- Parameter erreichbar nur in deisem Servlet -->
+        <init-param>
+            <param-name>abt-leiter</param-name>
+            <param-value>Max Mustermann</param-value>
+        </init-param>
+    </servlet>
+    
+    <!-- 'Globale' Parameter: erreichbar aus jedem Servlet -->
+    <context-param>
+        <param-name>firmenname</param-name>
+        <param-value>My Company</param-value>
+    </context-param>
+</web-app>

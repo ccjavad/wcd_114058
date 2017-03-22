@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <a href="readParams?color=red&size=big&size=small">send request params</a> <br/>
+        
+        <hr/>
+        1.
+        <form action="readParams">
+            <input type="submit"/>
+        </form>
+        
+        <hr/>
+        
+        2.
+        <form action="readParams">
+            <input type="text" name="color"/>
+            <input type="submit"/>
+        </form>
+        
+        <hr/>
+        3.
+        <form action="readParams">
+            <input name="color" value="orange"/>
+            <input type="submit" value="GET"/>
+        </form>
+        
+        <hr/>
+        4.
+        <form action="readParams" method="post">
+            <input name="color" value="blue"/>
+            <input type="submit" value="POST"/>
+        </form>
+        
+        <hr/>
+        5.
+        <form action="readParams" method="GET">
+            
+            <b>Farbe:</b> <br/>
+            <input type="radio" name="color" value="red" /> rot <br/>
+            <input type="radio" name="color" value="green" checked /> grün <br/>
+            <input type="radio" name="color" value="blue" /> blau <br/>
+            <br/>
+            
+            <b>Size:</b> <br/>
+            <input type="checkbox" name="size" value="big" checked/> big <br/>
+            <input type="checkbox" name="size" value="medium" checked/> medium <br/>
+            <input type="checkbox" name="size" value="small"/> small <br/>
+            
+            <br/>
+            <input type="submit" value="senden"/>
+        </form>
+        
+        
+    </body>
+</html>
