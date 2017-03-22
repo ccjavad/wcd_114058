@@ -4,9 +4,17 @@
         <servlet-name>ServletReadParams</servlet-name>
         <servlet-class>svts.ServletReadParams</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletHello</servlet-name>
+        <servlet-class>svts.ServletHello</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletReadParams</servlet-name>
         <url-pattern>/readParams</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletHello</servlet-name>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
