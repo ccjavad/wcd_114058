@@ -12,19 +12,10 @@
 
 ## Aufgaben:
 
+- Memory.pdf
 - Kapitel 4
+- Umleiten (redirect) vs. Weiterleiten
 
-- In einem Formular darf der Client seinen Namen eintragen. 
-Der Name wird an ein Servlet gesendet. Falls der Namen mehr als 2 Zeichen hat 
-(und weniger als 10), zeigt das Servlet 'Hallo user-name'. 
-Falls der Name zu gross oder zu klein ist, Fehlemeldung 
-und das Formular nochmal anzeigen, um die Eingabe korrigieren zu lassen.
-- ServletConfig/ServletContext (s. Projekt 'InitParameter')
-
-- HTTP-Methoden (Beschreibungen aus dem Buch gut kennen)
-- POST ist nicht idempotent?
-
-- Umleiten (redirect) vs. Weiterleiten?
 
 
 ## Kursinhalte:
