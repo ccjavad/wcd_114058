@@ -17,6 +17,7 @@
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/newGame</url-pattern>
+        <url-pattern>/openImage</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletView</servlet-name>

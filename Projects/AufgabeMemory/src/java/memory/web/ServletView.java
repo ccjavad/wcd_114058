@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import memory.Memory;
+import memory.MemoryImage;
 
 public class ServletView extends HttpServlet {
 
@@ -25,9 +27,10 @@ public class ServletView extends HttpServlet {
             out.println("<h1>Memory</h1>");
             
             out.println(" neues Spiel starten:");
-            out.println("<a href=\"newGame\">leicht</a>");
+            out.println("<a href=\"newGame?level=EASY\">leicht</a>");
+            out.println("<a href=\"newGame?level=NORMAL\">normal</a>");
+            out.println("<a href=\"newGame?level=HARD\">schwer</a>");
             out.println("<hr/>");
-            
             
             Memory game = (Memory)request.getAttribute("game");
             
@@ -41,16 +44,13 @@ public class ServletView extends HttpServlet {
                     
                     if(img.isOpen()) {
                         String name = img.getName();
-                        out.println("<img src=\"images/" + name + "\"/>");
+                        out.println("<img src=\"images/" + name + "\" width=\"50\"/>");
                         
                     } else {
-                        
                         out.println("<a href=\"openImage?index=" 
-                                + i + "\"><img src=\"images/Cover.png\"/></a>");
+                                + i + "\"><img src=\"images/cover.png\" width=\"50\"/></a>");
                     }
-                    
                 }
-                
             }
             
             out.println("</body>");
