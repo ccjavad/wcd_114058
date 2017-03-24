@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -30,13 +31,14 @@ public class ServletController extends HttpServlet {
         listImageNames = Arrays.asList(imageFileNames);
         listImageNames = new ArrayList<>(listImageNames);
         listImageNames.remove("cover.png");
+        listImageNames = Collections.unmodifiableList(listImageNames);
     }
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        // User-Wunsch erkennen und passend das Modell initialisieren/anpassen
+        // User-Wunsch erkennen und entsprechend das Modell initialisieren/anpassen
         
         String requestUri = request.getRequestURI();
         
