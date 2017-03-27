@@ -18,7 +18,8 @@
 - Cookies (API)
 - Optional: mit einem Formular den Client-Namen abfragen und als Cookie speichern. Den Cookie lesen und den Wert zeigen
 - Sessions
-
+- Muss die Arbeit mit den Attribute im Session-Scope synchroniziert werden?
+- AufgabeMemory für mehrere Clients
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

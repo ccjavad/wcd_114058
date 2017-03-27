@@ -4,9 +4,17 @@
         <servlet-name>ServletShowSession</servlet-name>
         <servlet-class>svts.ServletShowSession</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletCounter</servlet-name>
+        <servlet-class>svts.ServletCounter</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletShowSession</servlet-name>
         <url-pattern>/showSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCounter</servlet-name>
+        <url-pattern>/count</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
