@@ -1,5 +1,7 @@
 # Morgen!
 
+## Achtung! Am 29.03 bin ich nicht da
+
 ## Wissensvermittlung:
 
 - 08:00 - 09:30 Uhr
@@ -12,10 +14,10 @@
 
 ## Aufgaben:
 
-- Memory.pdf
-- Kapitel 4
-- Umleiten (redirect) vs. Weiterleiten
-
+- Kapitel 6
+- Cookies (API)
+- Optional: mit einem Formular den Client-Namen abfragen und als Cookie speichern. Den Cookie lesen und den Wert zeigen
+- Sessions
 
 
 ## Kursinhalte:
