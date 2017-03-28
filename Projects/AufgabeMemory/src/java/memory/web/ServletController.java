@@ -12,12 +12,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import memory.Memory;
 
 public class ServletController extends HttpServlet {
 
     private List<String> listImageNames;
-    private Memory game;
 
     @Override
     public void init() throws ServletException {
@@ -46,22 +46,34 @@ public class ServletController extends HttpServlet {
             String paramLevel = request.getParameter("level");
             Memory.Level level = Memory.Level.valueOf(paramLevel);
             
-            game = new Memory(level, listImageNames);
-            request.setAttribute("game", game);
+            Memory game = new Memory(level, listImageNames);
+            
+            HttpSession session = request.getSession();
+            synchronized(session) {
+                session.setAttribute("game", game);
+            }
+            
+//            request.setAttribute("game", game);
             
         } else if(requestUri.contains("/openImage")) {
             
             String paramImageIndex = request.getParameter("index");
             int imageIndex = Integer.parseInt(paramImageIndex);
 
-            game.openImage(imageIndex);
-            request.setAttribute("game", game);
+            HttpSession session = request.getSession();
+            synchronized(session) {
+                Memory game = (Memory)session.getAttribute("game");
+                game.openImage(imageIndex);
+            }
+//            request.setAttribute("game", game);
         }
         
         // View aktivieren        
         
-        RequestDispatcher rd = request.getRequestDispatcher("/view");
-        rd.forward(request, response);
+//        RequestDispatcher rd = request.getRequestDispatcher("/view");
+//        rd.forward(request, response);
+    
+        response.sendRedirect("view");
     }
 
 }

@@ -7,6 +7,7 @@ package svts;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +38,9 @@ public class ServletShowSession extends HttpServlet {
         //
         // 2. Das HttpSession-Objekt wird geliefert
         
-        HttpSession session = request.getSession();
+//        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(true); //dasselbe wie in der Zeile davor
+//        HttpSession session = request.getSession(false); //keine neue Session erzeugen, nur suchen:
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -47,7 +50,40 @@ public class ServletShowSession extends HttpServlet {
             out.println("<title>Servlet ServletShowSession</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletShowSession at " + request.getContextPath() + "</h1>");
+
+            out.println("session-id: " + session.getId() + "</br>");
+            out.println("isNew(): " + session.isNew() + "</br>");
+            
+            // Attributen-Methoden
+            
+            long creationTime = session.getCreationTime();
+            out.println("getCreationTime(): " + creationTime + " ms.</br>");
+            
+            long lastAccessedTime = session.getLastAccessedTime();
+            out.println("getLastAccessedTime(): " + lastAccessedTime + " ms.</br>");
+            
+            int maxInactiveInterval = session.getMaxInactiveInterval(); //sekunden
+            out.println("getMaxInactiveInterval(): " + maxInactiveInterval + " s.</br>");
+            out.println("getMaxInactiveInterval(): " + maxInactiveInterval / 60 + " min.</br>");
+            
+            /* Im DD in Minuten:
+                <session-config>
+                    <session-timeout>
+                        30
+                    </session-timeout>
+                </session-config>
+            */
+            
+            session.setMaxInactiveInterval(500); //sekunden
+            
+            //ServletContext context = session.getServletContext();
+
+            session.invalidate(); //danach bitte keine Attribute lesen/setzen
+            
+            
+            out.println("<hr/>");
+            out.println("<a href=\"showSession\">aktualisieren</a>");
+            
             out.println("</body>");
             out.println("</html>");
         }

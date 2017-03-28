@@ -16,9 +16,7 @@
 
 - Kapitel 6
 - Cookies (API)
-- Optional: mit einem Formular den Client-Namen abfragen und als Cookie speichern. Den Cookie lesen und den Wert zeigen
-- Sessions
-- Muss die Arbeit mit den Attribute im Session-Scope synchroniziert werden?
+- Sessions (API)
 - AufgabeMemory für mehrere Clients
 
 ## Kursinhalte:

@@ -32,13 +32,17 @@ public class ServletCounter extends HttpServlet {
             
             HttpSession session = request.getSession();
             
-            Integer countUser = (Integer)session.getAttribute("countUser");
-            if(countUser==null) {
-                countUser = 1;
-            } else {
-                countUser++;
+            Integer countUser;
+            
+            synchronized(session) {
+                countUser = (Integer)session.getAttribute("countUser");
+                if(countUser==null) {
+                    countUser = 1;
+                } else {
+                    countUser++;
+                }
+                session.setAttribute("countUser", countUser);
             }
-            session.setAttribute("countUser", countUser);
             
             out.println("Anzahl Ihrer Anfragen: " + countUser);
             
