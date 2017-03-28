@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ServletShowAtts</servlet-name>
+        <servlet-class>svts.ServletShowAtts</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAddAttsAndForward</servlet-name>
+        <servlet-class>svts.ServletAddAttsAndForward</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAddAttsAndRedirect</servlet-name>
+        <servlet-class>svts.ServletAddAttsAndRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletShowAtts</servlet-name>
+        <url-pattern>/showAtts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAddAttsAndForward</servlet-name>
+        <url-pattern>/addAttsAndForward</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAddAttsAndRedirect</servlet-name>
+        <url-pattern>/addAttsAndRedirect</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

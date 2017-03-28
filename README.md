@@ -14,10 +14,15 @@
 
 ## Aufgaben:
 
+- Aufgaben/Userlist.pdf
+
 - Kapitel 6
 - Cookies (API)
 - Sessions (API)
-- AufgabeMemory für mehrere Clients
+- URL-Rewriting
+
+- Kapitel 5 (nur Attribute, KEINE Listener)
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
