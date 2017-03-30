@@ -8,6 +8,10 @@
         <servlet-name>ServletCounter</servlet-name>
         <servlet-class>svts.ServletCounter</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletMitUrlRewriting</servlet-name>
+        <servlet-class>svts.ServletMitUrlRewriting</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletShowSession</servlet-name>
         <url-pattern>/showSession</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ServletCounter</servlet-name>
         <url-pattern>/count</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMitUrlRewriting</servlet-name>
+        <url-pattern>/testUrlRewriting</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

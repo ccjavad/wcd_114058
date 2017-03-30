@@ -20,6 +20,8 @@ public class ServletLogin extends HttpServlet {
         String userName = request.getParameter("userName");
         User u = new User(userName);
         HttpSession session = request.getSession();
+//        session.setMaxInactiveInterval(5);
+        
         session.setAttribute("user", u);
         
         //2. Den User zu der 'globalen' Liste aller eingloggten User hinzufügen

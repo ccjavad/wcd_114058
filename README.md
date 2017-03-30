@@ -14,9 +14,6 @@
 
 ## Aufgaben:
 
-- Aufgaben/Userlist.pdf
-- In der Dozentenllösung: Synchronisieren fehlt komplett. Was ist noch falsch (bezogen auf Sessions)?
-
 - Kapitel 5, 6 - Listener
 
 - URL-Rewriting
