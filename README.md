@@ -15,13 +15,11 @@
 ## Aufgaben:
 
 - Aufgaben/Userlist.pdf
+- In der Dozentenllösung: Synchronisieren fehlt komplett. Was ist noch falsch (bezogen auf Sessions)?
 
-- Kapitel 6
-- Cookies (API)
-- Sessions (API)
+- Kapitel 5, 6 - Listener
+
 - URL-Rewriting
-
-- Kapitel 5 (nur Attribute, KEINE Listener)
 
 
 ## Kursinhalte:
