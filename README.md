@@ -16,9 +16,9 @@
 
 - AufgabeUserlist mit Listener verbessern
 - Kapitel 5, 6 - Listener
-
-- URL-Rewriting
-
+- Einen Attribute-Listener testen. Wie kriegt man in der attributeReplaced 
+sowohl den alten (ersetzten) als auch den neuen Wert des Attributes?
+- Was kriegt man von dem HttpSessionBindingListener?
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
