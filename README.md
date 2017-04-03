@@ -1,7 +1,5 @@
 # Morgen!
 
-## Achtung! Am 29.03 bin ich nicht da
-
 ## Wissensvermittlung:
 
 - 08:00 - 09:30 Uhr
@@ -14,13 +12,11 @@
 
 ## Aufgaben:
 
-- Einen Attribute-Listener testen. Wie kriegt man in der attributeReplaced 
-sowohl den alten (ersetzten) als auch den neuen Wert des Attributes?
-
 - Kapitel 7. Einführung
-- Lebenszyklus einer JSP
+- Lebenszyklus einer JSP: Bitte für eine JSP mit den Konsolenausgaben 
+den Lebenszyklus (ab dem Laden der Klasse) begleiten
 - Scriptlets, Expressions, Declarations
-
+- Memory-View mit einer JSP?
 
 
 ## Kursinhalte:
