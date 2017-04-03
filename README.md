@@ -14,11 +14,14 @@
 
 ## Aufgaben:
 
-- AufgabeUserlist mit Listener verbessern
-- Kapitel 5, 6 - Listener
 - Einen Attribute-Listener testen. Wie kriegt man in der attributeReplaced 
 sowohl den alten (ersetzten) als auch den neuen Wert des Attributes?
-- Was kriegt man von dem HttpSessionBindingListener?
+
+- Kapitel 7. Einführung
+- Lebenszyklus einer JSP
+- Scriptlets, Expressions, Declarations
+
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

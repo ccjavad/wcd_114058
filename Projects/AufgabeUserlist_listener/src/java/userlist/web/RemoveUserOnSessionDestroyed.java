@@ -25,7 +25,6 @@ public class RemoveUserOnSessionDestroyed implements HttpSessionListener {
 
             listUser.remove(u);
         }
-
     }
 
 }
