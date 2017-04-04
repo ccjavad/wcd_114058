@@ -13,10 +13,12 @@
 ## Aufgaben:
 
 - Kapitel 7. Einführung
-- Lebenszyklus einer JSP: Bitte für eine JSP mit den Konsolenausgaben 
-den Lebenszyklus (ab dem Laden der Klasse) begleiten
-- Scriptlets, Expressions, Declarations
-- Memory-View mit einer JSP?
+- page-Directive (s. HeadFirst)
+- Liste der impliziten Objekte in Scriptlets
+- Hat die Klasse PageContext Ähnlichkeiten mit dem RequestDispatcher?
+- Wdh. RequestDispatcher. Was kann die include-Methode?
+- Basisklasse von PageContext? Was sollen die 'Attributen'-Methoden da?
+- Welche getter können Sie verstehen?
 
 
 ## Kursinhalte:
