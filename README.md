@@ -12,10 +12,8 @@
 
 ## Aufgaben:
 
-- Kapitel 7
-- Hat die Klasse PageContext Ähnlichkeiten mit dem RequestDispatcher?
-
-- Architekturmodell 2 und 1 (Nicht in der Prüfung)
+- Kapitel 7. Fragen
+- Optional: Kapitel 8. Standard Actions
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

@@ -21,6 +21,11 @@ public class ServletBack extends HttpServlet {
             out.println("<title>Servlet ServletBack</title>");            
             out.println("</head>");
             out.println("<body>");
+
+            // --------------------------------- 
+            RequestDispatcher rd = request.getRequestDispatcher("/date");
+            rd.include(request, response);
+            out.println("<hr/>");
             
             out.println("Request-Parameter color = " + request.getParameter("color"));
             
@@ -34,10 +39,6 @@ public class ServletBack extends HttpServlet {
                 out.println(name + " = " + value + "<br/>");
             }
             
-            out.println("<hr/>");
-            // --------------------------------- 
-            RequestDispatcher rd = request.getRequestDispatcher("/date");
-            rd.include(request, response);
             
             out.println("</body>");
             out.println("</html>");

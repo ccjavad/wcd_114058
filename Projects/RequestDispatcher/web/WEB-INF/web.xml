@@ -12,6 +12,10 @@
         <servlet-name>ServletToInclude</servlet-name>
         <servlet-class>svts.ServletToInclude</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletForwardToForeignContext</servlet-name>
+        <servlet-class>svts.ServletForwardToForeignContext</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletFront</servlet-name>
         <url-pattern>/front</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>ServletToInclude</servlet-name>
         <url-pattern>/date</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletForwardToForeignContext</servlet-name>
+        <url-pattern>/testForwardToForeignContext</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
