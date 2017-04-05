@@ -13,13 +13,7 @@
 ## Aufgaben:
 
 - Kapitel 7
-
-- page-Directive (s. HeadFirst)
-- Liste der impliziten Objekte in Scriptlets
 - Hat die Klasse PageContext Ähnlichkeiten mit dem RequestDispatcher?
-- Welche getter können Sie verstehen?
-- Wdh. RequestDispatcher. Was kann die include-Methode?
-- Basisklasse von PageContext? Was sollen die 'Attributen'-Methoden da?
 
 - Architekturmodell 2 und 1 (Nicht in der Prüfung)
 
