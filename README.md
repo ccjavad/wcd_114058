@@ -13,6 +13,8 @@
 ## Aufgaben:
 
 - Kapitel 8. 
+- JSP-StandardActions.pdf
+
 - useBean: mit einer eigenen Bean-Klasse
 - getProperty
 - setProperty. Was bedeutet property="*"? Wozu 'param'?

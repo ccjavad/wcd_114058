@@ -19,6 +19,18 @@
         <jsp:setProperty name="d1" property="time" value="0"/>
         getProperty: <jsp:getProperty name="d1" property="time"/> <br/>
         
+        <hr/>
+        
+        <a href="testSetPropertyMitParam.jsp?color=red">teste setProperty mit param 'color'</a>
+        
+        <hr/>
+        
+        <form action="testSetPropertyMitParam.jsp">
+            Farbe: <input name="farbe" /> <br/>
+            Leistung: <input name="leistung" /> <br/>
+            
+            <input type="submit"/>
+        </form>
         
     </body>
 </html>
