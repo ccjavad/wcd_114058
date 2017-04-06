@@ -12,8 +12,11 @@
 
 ## Aufgaben:
 
-- Kapitel 7. Fragen
-- Optional: Kapitel 8. Standard Actions
+- Kapitel 8. 
+- useBean: mit einer eigenen Bean-Klasse
+- getProperty
+- setProperty. Was bedeutet property="*"? Wozu 'param'?
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
