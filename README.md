@@ -13,11 +13,14 @@
 ## Aufgaben:
 
 - Kapitel 8. 
-- JSP-StandardActions.pdf
-
-- useBean: mit einer eigenen Bean-Klasse
+- useBean
 - getProperty
-- setProperty. Was bedeutet property="*"? Wozu 'param'?
+- setProperty
+
+- include und forward
+- include-Directive vs. jsp:include
+
+- finden Sie im Kapitel 11 weitere Standard Actions
 
 
 ## Kursinhalte:
