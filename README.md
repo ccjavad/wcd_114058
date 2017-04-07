@@ -19,9 +19,12 @@
 
 - include und forward
 - include-Directive vs. jsp:include
+- param
 
 - finden Sie im Kapitel 11 weitere Standard Actions
 
+- Optional: Expression Language
+- Optional: JSP-Urlaubsplaner.pdf
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
