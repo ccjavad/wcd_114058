@@ -1,3 +1,7 @@
+<%-- 
+    Scripting-Kommentar
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,9 +10,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:useBean id="d1" class="java.util.Date"/>
         
-        d1.time: ${d1.time} <br/>
+        <%@include file="toInclude.html" %>
+        
+        <jsp:include page="toInclude.html" />
+        
+        <% int x = 3; %>
+        
+        <%= x %>
+        
+        <%! int y = 5; %>
         
     </body>
 </html>
