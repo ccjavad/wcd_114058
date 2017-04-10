@@ -14,8 +14,14 @@
 
 - Kapitel 8. 
 - Expression Language
-
 - Zugriffsoperatoren Punkt und Klammer
+- Erzeugen Sie eine Liste mit Integer von 1 bis 3. Greifen Sie auf die Pos. 1 mit den Zugriffsoperatoren zu.
+- Erzeugen Sie eine Map (String to Integer): mo - 1, di - 2...
+- Versuchen Sie in einem EL-Ausdruck den Wert aus der Map zu lesen und als Index für den Zugriff 
+auf die Liste einzusetzen
+
+- Implizite EL-Objekte mit den impliziten Scriptlets-Objekten vergleichen
+- Optional: weitere EL-Operatoren
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
