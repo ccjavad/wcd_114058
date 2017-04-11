@@ -17,4 +17,9 @@
             <el-ignored>false</el-ignored>
         </jsp-property-group>
     </jsp-config>
+    
+    <context-param>
+        <param-name>server-ip</param-name>
+        <param-value>192.168.1.105</param-value>
+    </context-param>
 </web-app>
