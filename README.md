@@ -17,7 +17,7 @@
 - Zugriffsoperatoren Punkt und Klammer
 - Implizite EL-Objekte mit den impliziten Scriptlets-Objekten vergleichen
 - weitere EL-Operatoren
-- Optional: EL-Funktionen
+- EL-Funktionen
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
