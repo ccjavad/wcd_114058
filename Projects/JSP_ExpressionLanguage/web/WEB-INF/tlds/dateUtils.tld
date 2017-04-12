@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>dateutils</short-name>
+  <uri>/WEB-INF/tlds/dateUtils</uri>
+  
+  <function>
+      <name>getDate</name>
+      <function-class>utils.DateUtils</function-class>
+      <function-signature>java.util.Date create()</function-signature>
+  </function>
+  
+  <function>
+      <name>addDays</name>
+      <function-class>utils.DateUtils</function-class>
+      <function-signature>void addDays(java.util.Date, int)</function-signature>
+  </function>
+  
+  <function>
+      <name>printDate</name>
+      <function-class>utils.DateUtils</function-class>
+      <function-signature>void print(java.util.Date, javax.servlet.jsp.JspWriter)</function-signature>
+  </function>
+  
+  <function>
+      <name>createDate</name>
+      <function-class>utils.DateUtils</function-class>
+      <function-signature>void create(java.lang.String, java.lang.String, javax.servlet.jsp.PageContext)</function-signature>
+  </function>
+  
+  <function>
+      <name>formatDate</name>
+      <function-class>utils.DateUtils</function-class>
+      <function-signature>java.lang.String format(java.util.Date, java.lang.String)</function-signature>
+  </function>
+  
+  
+</taglib>

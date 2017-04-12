@@ -12,10 +12,8 @@
 
 ## Aufgaben:
 
-- Kapitel 8. 
-- EL-Funktionen
-- EL - Funktionen.pdf
 - Kapitel 8, Fragen
+- Kapitel 9, JSTL
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
