@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>pointutils</short-name>
+  
+  <uri>ein eindeutiger beliebiger String. Hier für die Lib mit Point-Funktionen</uri>
+  
+  <function>
+      <name>random</name>
+      <function-class>utils.PointUtils</function-class>
+      <function-signature>utils.Point createRandomPoint()</function-signature>
+  </function>
+  
+  <function>
+      <name>move</name>
+      <function-class>utils.PointUtils</function-class>
+      <function-signature>void movePoint(utils.Point, int, int)</function-signature>
+  </function>
+  
+  <function>
+      <name>createAsAttribute</name>
+      <function-class>utils.PointUtils</function-class>
+      <function-signature>void createPoint(int, int, java.lang.String, javax.servlet.jsp.PageContext)</function-signature>
+  </function>
+  
+  <function>
+      <name>setAsAttribute</name>
+      <function-class>utils.PointUtils</function-class>
+      <function-signature>void copyAttributeName(utils.Point, java.lang.String, javax.servlet.jsp.PageContext)</function-signature>
+  </function>
+  
+</taglib>

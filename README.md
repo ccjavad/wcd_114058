@@ -13,11 +13,9 @@
 ## Aufgaben:
 
 - Kapitel 8. 
-- Expression Language
-- Zugriffsoperatoren Punkt und Klammer
-- Implizite EL-Objekte mit den impliziten Scriptlets-Objekten vergleichen
-- weitere EL-Operatoren
 - EL-Funktionen
+- EL - Funktionen.pdf
+- Kapitel 8, Fragen
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
