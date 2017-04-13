@@ -21,6 +21,42 @@
         <c:forEach items="${map}" var="element">
             ${element.key} = ${element.value}<br/>
         </c:forEach>
+            
+            
+        <h3>Alle Request-Parameter ausgeben</h3>
+        
+        <a href="forEach_mit_Map.jsp?color=red&color=orange&size=big">
+            sende zum Testen Request-Parameter</a>
+        <br/>
+        
+        <h4>request.getParameterMap</h4>
+        
+        request.getParameterMap: <%= request.getParameterMap() %> <br/>
+        <%
+            pageContext.setAttribute("paramMap", request.getParameterMap());
+        %>
+        
+        <c:forEach items="${paramMap}" var="element">
+            <b>${element.key}</b>: 
+            <c:forEach items="${element.value}" var="value">
+                ${value}, 
+            </c:forEach>
+            
+            <br/>
+        </c:forEach>
+        
+
+        <h4>\${paramValues}</h4>            
+        paramValues: ${paramValues} <br/>
+        
+        <c:forEach items="${paramValues}" var="element">
+            <b>${element.key}</b>: 
+            <c:forEach items="${element.value}" var="value">
+                ${value}, 
+            </c:forEach>
+            
+            <br/>
+        </c:forEach>
         
     </body>
 </html>

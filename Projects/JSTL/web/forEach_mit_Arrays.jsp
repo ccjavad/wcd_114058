@@ -28,6 +28,26 @@
             <b>${status.count}.</b>
             ${x} <br/>
         </c:forEach>
+            
+            
+        <h3>2D-Array ausgeben</h3>
+        
+        <%
+            String[][] arrStr = {
+                { "mo", "di", "mi" },
+                { "jan", "feb" },
+                { "stunde", "minute" }
+            };
+            
+            pageContext.setAttribute("arr2D", arrStr);
+        %>
+        
+        <c:forEach items="${arr2D}" var="strings">
+            <c:forEach items="${strings}" var="s">
+                ${s} 
+            </c:forEach>
+            <br/>
+        </c:forEach>
         
     </body>
 </html>

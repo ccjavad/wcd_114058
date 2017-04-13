@@ -15,10 +15,10 @@
 - Kapitel 9, JSTL (Core)
 - if
 - forEach
-- Bitte ein 2D-Array ausgeben
-- Senden Sie bitte an eine JSP mehrere request-Parameter. Geben Sie alle Elemente aus, 
-die die JSP in der request.getParameterMap() findet
 - Optional: forEach mit forTokens vergleichen
+- choose/when/otherwise
+- AufgabeMemory. View ohne Scriptlets/Expressions
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
