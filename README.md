@@ -13,12 +13,11 @@
 ## Aufgaben:
 
 - Kapitel 9, JSTL (Core)
-- if
-- forEach
-- Optional: forEach mit forTokens vergleichen
-- choose/when/otherwise
-- AufgabeMemory. View ohne Scriptlets/Expressions
+- out
+- set/remove
 
+- Wdh. jsp:include und include-Directive
+- Optional: import
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

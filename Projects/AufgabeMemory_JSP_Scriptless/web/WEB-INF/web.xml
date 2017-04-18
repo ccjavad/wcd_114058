@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <servlet>
-        <servlet-name>SaveUserTextServlet</servlet-name>
-        <servlet-class>svts.SaveUserTextServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SaveUserTextServlet</servlet-name>
-        <url-pattern>/cross_site_scripting/saveUserText</url-pattern>
-    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>memory.web.ServletController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/newGame</url-pattern>
+        <url-pattern>/openImage</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
