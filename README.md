@@ -12,6 +12,7 @@
 
 ## Aufgaben:
 
+- Aufgaben/JSTL - Guestbook.pdf
 - Kapitel 9, JSTL (Core)
 - out
 - set/remove
