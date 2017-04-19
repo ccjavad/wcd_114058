@@ -18,11 +18,9 @@
 
 - Wdh. jsp:include und include-Directive
 - import
-
 - redirect, url, param
-- Optional: catch
 
-- f. Dozenten (AufgabeGuestbook mit einer Datenbank)
+- catch
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

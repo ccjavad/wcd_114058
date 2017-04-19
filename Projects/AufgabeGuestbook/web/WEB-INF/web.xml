@@ -13,8 +13,7 @@
             30
         </session-timeout>
     </session-config>
-    
     <listener>
-        <listener-class>gb.web.InitApp</listener-class>
+        <listener-class>gb.web.PersistenceListener</listener-class>
     </listener>
 </web-app>
