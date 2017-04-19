@@ -12,13 +12,17 @@
 
 ## Aufgaben:
 
-- Aufgaben/JSTL - Guestbook.pdf
 - Kapitel 9, JSTL (Core)
 - out
 - set/remove
 
 - Wdh. jsp:include und include-Directive
-- Optional: import
+- import
+
+- redirect, url, param
+- Optional: catch
+
+- f. Dozenten (AufgabeGuestbook mit einer Datenbank)
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
@@ -30,3 +34,4 @@
 
 
 A. Patrin (A.Patrin@comcave.com)
+

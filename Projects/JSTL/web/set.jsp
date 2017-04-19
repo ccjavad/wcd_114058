@@ -1,3 +1,6 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.Date"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -32,7 +35,9 @@
         --%>
 
 
+        
         <h1>set mit var. Neue (einfache) Namen für vorhandene Elemente erzeugen</h1>
+        
         <% pageContext.setAttribute("com.mycompany.mylib.myatt", 44); %>
         
         att: ${pageScope["com.mycompany.mylib.myatt"]} <br/>
@@ -46,9 +51,34 @@
         
         
         
-        <h1>set mit target mit Beans</h1>
-        <h1>set mit target mit Maps</h1>
+        <h1>set mit target. Property einer Bean setzen</h1>
         
+        <jsp:useBean id="d1" class="java.util.Date"/>
+        <jsp:setProperty name="d1" property="time" value="0"/>
+        d1 = ${d1} <br/>
+        
+        <jsp:useBean id="d2" class="java.util.Date"/>
+        <c:set target="${d2}" property="time" value="0"/> <%-- Achtung! target muss dynamisch ermittelt werden --%>
+        d2 = ${d2} <br/>
+
+
+        
+        <h1>set mit target. Map erweitern/ändern</h1>
+
+        <% 
+           Map<String, Object> map = new HashMap<>();
+           pageContext.setAttribute("map", map);
+        %>
+        
+        <c:set target="${map}" property="mo" value="Montag"/> <%-- Achtung! target muss dynamisch ermittelt werden --%>
+        map: ${map} <br/>
+        
+        <%--
+            setProperty kann nur Properties von Beans setzen.
+                Geht gar nicht:
+        
+            <jsp:setProperty name="map" property="di" value="Dienstag" />
+        --%>
         
     </body>
 </html>
