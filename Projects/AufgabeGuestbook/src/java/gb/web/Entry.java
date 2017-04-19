@@ -10,10 +10,12 @@ public class Entry {
     private final Date date;
 
     public Entry(String userName, String userText) {
+        this(new Date(), userName, userText);
+    }
+    public Entry(Date date, String userName, String userText) {
         this.userName = userName;
         this.userText = userText;
-        
-        this.date = new Date();
+        this.date = date;
     }
 
     public Date getDate() {
