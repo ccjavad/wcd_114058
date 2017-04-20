@@ -12,10 +12,9 @@
 
 ## Aufgaben:
 
-- Kapitel 9, Fragen
-- catch
-
 - Kapitel 10 - SimpleTagSupport (KEINE klassischen TagSupport)
+- if nachbilden
+- forEach (NUR als for-Schleife) nachbilden
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
