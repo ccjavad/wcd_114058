@@ -12,15 +12,10 @@
 
 ## Aufgaben:
 
-- Kapitel 9, JSTL (Core)
-- out
-- set/remove
-
-- Wdh. jsp:include und include-Directive
-- import
-- redirect, url, param
-
+- Kapitel 9, Fragen
 - catch
+
+- Kapitel 10 - SimpleTagSupport (KEINE klassischen TagSupport)
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
