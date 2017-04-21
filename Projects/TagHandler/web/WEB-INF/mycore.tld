@@ -7,10 +7,49 @@
   <tag>
       <name>if</name>
       <tag-class>mycore.IfHandler</tag-class>
+      <!--
+      <body-content>JSP</body-content>
+      <body-content>tagdependent</body-content>
+      <body-content>empty</body-content>
+      -->
       <body-content>scriptless</body-content>
       
       <attribute>
           <name>test</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      
+      <attribute>
+          <name>var</name>
+      </attribute>
+      
+      <attribute>
+          <name>scope</name>
+      </attribute>
+  </tag>
+  
+  
+  <tag>
+      <name>for</name>
+      <tag-class>mycore.ForHandler</tag-class>
+      <body-content>scriptless</body-content>
+      
+      <attribute>
+          <name>begin</name>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>end</name>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>step</name>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      
+      <attribute>
+          <name>var</name>
       </attribute>
   </tag>
 </taglib>
