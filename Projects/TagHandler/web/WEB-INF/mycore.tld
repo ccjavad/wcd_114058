@@ -52,4 +52,26 @@
           <name>var</name>
       </attribute>
   </tag>
+  
+  
+  <tag>
+      <name>forEach</name>
+      <tag-class>mycore.ForEachHandler</tag-class>
+      <body-content>scriptless</body-content>
+      
+      <attribute>
+          <name>items</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      
+      <attribute>
+          <name>var</name>
+      </attribute>
+
+      <attribute>
+          <name>varStatus</name>
+      </attribute>
+  </tag>
+  
 </taglib>

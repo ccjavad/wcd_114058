@@ -9,4 +9,16 @@
       <tag-class>myactions.DateHandler</tag-class>
       <body-content>empty</body-content>
   </tag>
+  
+  <tag>
+      <name>outer</name>
+      <tag-class>myactions.OuterHandler</tag-class>
+      <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+      <name>inner</name>
+      <tag-class>myactions.InnerHandler</tag-class>
+      <body-content>empty</body-content>
+  </tag>
 </taglib>

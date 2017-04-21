@@ -16,6 +16,8 @@
 - if nachbilden
 - forEach (NUR als for-Schleife) nachbilden
 - forEach mit einer neuen Action aber nur für Collection nachbilden
+- forEach mit einer neuen Action aber nur für Maps nachbilden
+- Optional: choose/when/otherwise
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
