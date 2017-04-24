@@ -12,7 +12,8 @@ public class InnerHandler extends SimpleTagSupport {
         JspWriter out = getJspContext().getOut();
         out.print("InnerHandler. <br/>");
         
-        JspTag parent = getParent();
+//        JspTag parent = SimpleTagSupport.findAncestorWithClass(this, OuterHandler.class);
+        JspTag parent = getParent(); 
         if(parent instanceof OuterHandler) {
             OuterHandler outer = (OuterHandler)parent;
             outer.setMessage("Hallo aus dem InnerHandler");

@@ -21,4 +21,18 @@
       <tag-class>myactions.InnerHandler</tag-class>
       <body-content>empty</body-content>
   </tag>
+  
+  
+  <tag>
+      <name>produkt</name>
+      <tag-class>myactions.ProduktHandler</tag-class>
+      <body-content>empty</body-content>
+      
+      <attribute>
+          <name>name</name>
+          <required>true</required>
+      </attribute>
+      
+      <dynamic-attributes>true</dynamic-attributes>
+  </tag>
 </taglib>

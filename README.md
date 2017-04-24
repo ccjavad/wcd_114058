@@ -12,12 +12,8 @@
 
 ## Aufgaben:
 
-- Kapitel 10 - SimpleTagSupport (KEINE klassischen TagSupport)
-- if nachbilden
-- forEach (NUR als for-Schleife) nachbilden
-- forEach mit einer neuen Action aber nur für Collection nachbilden
-- forEach mit einer neuen Action aber nur für Maps nachbilden
-- Optional: choose/when/otherwise
+- Kapitel 10 - Tag-Files
+- Optional: weitere Core-Actions mit Tag-Handler
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

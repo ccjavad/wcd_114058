@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="ma" uri="/WEB-INF/myactions" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="memory.MemoryImage, memory.Memory" %>
 <%@page import="java.util.List" %>
@@ -46,21 +47,18 @@
             }
         --%>
 
+        <ma:sync monitor="${pageContext.session}">
+            <c:forEach items="${game.images}" var="img" varStatus="status">
+                <c:choose>
+                    <c:when test="${img.open}">
+                        <img src="images/${img.name}" width="50"/>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="openImage?index=${status.count-1}"><img src="images/cover.png" width="50"/></a>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+        </ma:sync>
 
-        <%-- 
-            Achtung! Synchronisieren fehlt
-        --%>
-        
-        <c:forEach items="${game.images}" var="img" varStatus="status">
-            <c:choose>
-                <c:when test="${img.open}">
-                    <img src="images/${img.name}" width="50"/>
-                </c:when>
-                <c:otherwise>
-                    <a href="openImage?index=${status.count-1}"><img src="images/cover.png" width="50"/></a>
-                </c:otherwise>
-            </c:choose>
-        </c:forEach>
-                    
         </body>
     </html>

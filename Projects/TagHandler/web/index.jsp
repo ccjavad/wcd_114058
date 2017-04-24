@@ -16,5 +16,9 @@
             <ma:inner/>
         </ma:outer>
         
+        <hr/>
+        
+        <ma:produkt name="Milch" e101="20" e500="3" e444="${15+2}"/>
+        
     </body>
 </html>
