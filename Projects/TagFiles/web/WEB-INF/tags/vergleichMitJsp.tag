@@ -19,12 +19,42 @@
 <%--
     Template Texte: wie bei einer JSP
 --%>
-Hallo, ich bin Template-Text<br/>
+-- Hallo, ich bin Template-Text<br/>
 
 <%--
-    Scriptlets, Expression und Declarations: wie bei einer JSP
+    Scriptlets, Expression und Declarations: wie bei einer JSP (s. implizite Objekte)
 --%>
 <%! int y = 5; %>
 <% int x = 3; %>
-x + y = <%= x + y %> <br/>
+-- x + y = <%= x + y %> <br/>
 
+<%--
+    Implizite Objekte für Scriptlets wie bei einer JSP, aber:
+           JSP hat pageContext
+           Tag-File hat jspContext
+
+           <%= pageContext %> in einer Tag-Datei führt zum Compilerfehler
+--%>
+-- Tag-File. jspContext: <%= jspContext %> <br/>
+
+
+<%--
+    Standard-Actions:
+        - alle, die eine JSP haben kann: useBean, getProperty...
+        - und eigene (nur für Tag-Files): jsp:doBody (s. testDoBody.tag), jsp:invoke
+--%>
+<jsp:useBean id="d1" class="java.util.Date"/>
+
+
+<%--
+    Expression Language: wie bei einer JSP
+--%>
+-- Tag-File. pageContext: ${pageContext} <br/>
+
+
+<%--
+    CustomActions: wie bei einer JSP
+--%>
+<c:forEach begin="1" end="3" var="x">
+  ${x}
+</c:forEach>

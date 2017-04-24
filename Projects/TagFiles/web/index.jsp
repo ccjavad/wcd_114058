@@ -23,8 +23,15 @@
         
         <hr/>
         
+        <b>JSP. pageContext: <%= pageContext %></b> <br/>
         <mtf:vergleichMitJsp/>
         
+        
+        <hr/>
+        
+        <mtf:testDoBody>
+            JSP. im Body der testDoBody<br/>
+        </mtf:testDoBody>
         
         
     </body>
