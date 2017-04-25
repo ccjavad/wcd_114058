@@ -10,11 +10,32 @@
     </head>
     <body>
 
+        <h1>Actions-Test:</h1>
+        
         date: <ma:date/> <br/>
         time: <ma:time/> <br/>
         
         <hr/>
         zeit: <mtf:zeit/>
+
+
+        <h1>Jar-Datei vorbereiten</h1>
+        s. das Projekt-Unterverzeichnis '_build_jar'
         
+        <h2>Struktur der Jar-Datei</h2>
+        <pre>
+             /                       (Wurzel der Jar-Datei)
+              |- META-INF/
+                |- taglib.tld           (TLD)
+                |-tags/              (Ordner für Tag-Dateien. Muss sein!)
+                    |- zeit.tag         (Tag-Datei)
+              |- com/                (Packages mit Klassen)
+                |- mycompany/
+                    |- taglib/
+                        |- HandlerDate.class
+
+        </pre>
+        
+
     </body>
 </html>

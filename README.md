@@ -12,6 +12,8 @@
 
 ## Aufgaben:
 
+- Kapitel 11: Struktur einer Webanwendung und einer War-Datei
+
 - Kapitel 10 - Tag-Files und SimpleTagSupport
 - Optional: weitere Core-Actions mit Tag-Handler
 
