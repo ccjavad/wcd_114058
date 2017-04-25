@@ -12,7 +12,7 @@
 
 ## Aufgaben:
 
-- Kapitel 10 - Tag-Files
+- Kapitel 10 - Tag-Files und SimpleTagSupport
 - Optional: weitere Core-Actions mit Tag-Handler
 
 ## Kursinhalte:
