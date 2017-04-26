@@ -12,10 +12,12 @@
 
 ## Aufgaben:
 
-- Kapitel 11: Struktur einer Webanwendung und einer War-Datei
+- Kapitel 11.
+- Errorhandling
+- S. 630-632 nur einmal lesen
+- mime-mapping
 
-- Kapitel 10 - Tag-Files und SimpleTagSupport
-- Optional: weitere Core-Actions mit Tag-Handler
+- Struktur einer Webanwendung und einer War-Datei
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

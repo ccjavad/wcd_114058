@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Struktur einer Webapp</h1>
+        
+        <pre>
+
+            /                   (ContextPath - Wurzelverzeichnis der Anwendung auf dem Server, hier: WebApp)
+            |-images/
+                |-bild1.png
+                |-...
+            |- index.html
+            |- wichtig.jsp
+            |- META-INF/
+                |- manifest.mf  (Speziell für Webapp: Abhägigkeiten (dependencies) von externen Libs)
+            |- WEB-INF/
+                |- web.xml      (DD)
+                |- myactions.tld                    (Action 1 und 2 - Deklarationen)
+                |- classes/     (Klassen für den Classpath)
+                    |- mypackage1/
+                        |- utils/
+                            |- DateUtils.class
+                        |- servlets/
+                            |- MyServlet1.class
+                        |- actions/
+                            |- MyHandler1.class     (Action 1-Realsierung)
+                            |- MyHandler2.class     (Action 2-Realsierung)
+                |- tags/        (Für Tag-Files)
+                    |- lib1action1.tag
+                    |- lib1action2.tag
+                    |- lib2/
+                        |- lib2action1.tag
+                        |- lib2action2.tag
+                |- lib/         (Jars für den Classpath)
+                    |- jsoup.jar/
+                        |...
+                    |- taglib.jar/                  (Taglib für eine Webapp)
+                        |- package1/
+                            |- TagHandlerForActionA.class   (Action A-Realsierung)
+                            |- TagHandlerForActionB.class   (Action B-Realsierung)
+                        |- META-INF/
+                            |- actions.tld                  (Action A, B, X, Y - Deklarationen)
+                            |- tags/
+                                |- actionX.tag
+                                |- actionY.tag
+                        
+                    
+            
+        </pre>
+        
+    </body>
+</html>

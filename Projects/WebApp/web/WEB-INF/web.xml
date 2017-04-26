@@ -22,4 +22,9 @@
         <url-pattern>/lebenszyklus</url-pattern>
     </servlet-mapping>
     
+    
+    <mime-mapping>
+        <extension>img</extension>
+        <mime-type>application/octet-stream</mime-type>
+    </mime-mapping>
 </web-app>
