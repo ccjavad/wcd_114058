@@ -13,7 +13,8 @@
 ## Aufgaben:
 
 - Kapitel 11.
-- Errorhandling
+- Errorhandling. Spielt Vererbungshierarchie der Exceptions eine Rolle?
+
 - S. 630-632 nur einmal lesen
 - mime-mapping
 
