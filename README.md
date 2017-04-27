@@ -14,6 +14,7 @@
 
 - Kapitel 11. Fragen
 - Kapitel 12, Authentifizieren, Autorisieren
+- Die Beschreibungen der 4 Authentifizierungsmethoden
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
