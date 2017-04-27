@@ -18,9 +18,28 @@
         
         
         
-        <h1>error pages</h1>
+        <h1>DD: error-page mit exception-type</h1>
+        <h2>Die präziesere Behandlung wird ausgewählt</h2>
         
-        <a href="jspMitNumberFormatEx.jsp">zu der JSP mit der NumberFormatException</a>
+        <a href="jspMitNumberFormatEx.jsp">
+            zu der JSP mit der NumberFormatException (extends IllegalArgumentException)</a>
+        <br/>
+        <a href="jspMitIllegalArgumentEx.jsp">
+            zu der JSP mit einer anderen IllegalArgumnetException (keine NumberFormatException)</a>
+        
+        <h2>Nur Exceptions kann man unter exception-type angeben!</h2>
+        <h3>Throwable kann auch eine Exception sein (auch OK als exception-type)</h3>
+        
+        
+        
+        <h1>page-Directive mit errorPage</h1>
+        <!--  <%@page errorPage="" %> -->
+        <a href="jspMitNumberFormatExUndBesonderenBehandlung.jsp">zu einer JSP, die für jede Exception ihre eigene 'error-page' hat</a>
+        
+        
+        
+        <h1>DD: error-page mit error-code</h1>
+        <a href="nichtda">zu einer Resource, die es nicht gibt</a>
         
     </body>
 </html>

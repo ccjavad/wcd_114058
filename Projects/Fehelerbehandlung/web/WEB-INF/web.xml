@@ -19,10 +19,32 @@
         </jsp-property-group>
     </jsp-config>
     -->
-    
+
+    <error-page>
+        <exception-type>java.lang.IllegalArgumentException</exception-type>
+        <location>/WEB-INF/behandelnIllegalArgumentEx.jsp</location>
+    </error-page>
+
     <error-page>
         <exception-type>java.lang.NumberFormatException</exception-type>
         <location>/WEB-INF/behandelnNumberFormatEx.jsp</location>
     </error-page>
+
+    <!--
+        Bei Tomcat wird dieser Eintrag alle anderen error-pages überdecken.
+        Aber nicht in der Prüfung
+    
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/behandelnEx.jsp</location>
+    </error-page>
+    -->
+    
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/404.jsp</location>
+    </error-page>
+
     
 </web-app>

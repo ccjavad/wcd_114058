@@ -1,4 +1,10 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%-- 
+    Document   : 404
+    Created on : 27.04.2017, 08:50:46
+    Author     : apatrin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>NumberFormatException abgefangen</h1>
+        <h1>404</h1>
     </body>
 </html>

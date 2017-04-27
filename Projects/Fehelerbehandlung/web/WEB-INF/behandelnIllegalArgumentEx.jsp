@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +6,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>NumberFormatException abgefangen</h1>
+        <h1>IllegalArgumentException abgefangen</h1>
     </body>
 </html>
