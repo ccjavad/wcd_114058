@@ -12,9 +12,9 @@
 
 ## Aufgaben:
 
-- Kapitel 11. Fragen
-- Kapitel 12, Authentifizieren, Autorisieren
-- Die Beschreibungen der 4 Authentifizierungsmethoden
+- Kapitel 12
+- security-constraint und die Konflikte bei gleichen Ressourcen
+- http-method in der web-resource-collection
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

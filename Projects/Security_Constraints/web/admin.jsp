@@ -1,3 +1,9 @@
+<%-- 
+    Document   : admin
+    Created on : 28.04.2017, 09:24:46
+    Author     : apatrin
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,9 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>user.jsp. Nur für die regUser</h1>
-        
-        <a href="logout">ausloggen (bei FORM-Authentifizierung)</a>
-        
+        <h1>admin.jsp</h1>
     </body>
 </html>

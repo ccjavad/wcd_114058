@@ -6,9 +6,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>user.jsp. Nur für die regUser</h1>
-        
-        <a href="logout">ausloggen (bei FORM-Authentifizierung)</a>
-        
+        <h1>user.jsp</h1>
     </body>
 </html>

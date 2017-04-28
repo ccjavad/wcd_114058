@@ -6,9 +6,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>user.jsp. Nur für die regUser</h1>
-        
-        <a href="logout">ausloggen (bei FORM-Authentifizierung)</a>
-        
+        <form action="j_security_check" method="post">
+            Name: <input name="j_username"/>
+            Password: <input type="password" name="j_password"/>
+            
+            <input type="submit" />
+        </form>
     </body>
 </html>

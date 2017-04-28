@@ -10,7 +10,6 @@
         <a href="user.jsp">zu der user.jsp</a>
 
         <pre>
-            
         Nicht in der Prüfung:
 
             1. Security Realm einrichten:
@@ -20,10 +19,70 @@
                 tomcat-users.xml im CATALINA-BASE Verzeichnis ändern!!!
                 Nach dem Ändern Tomcat neu starten
 
-
         In der Prüfung:        
 
             2. Security (im DD) konfigurieren
+        </pre>
+        
+        
+        <h1>BASIC</h1>
+        <pre>
+
+        1. Anfrage: 
+            http://localhost:8084/Security_Auth/user.jsp
+
+        1. Antwort:
+            HTTP/1.1 401 Unauthorized
+                WWW-Authenticate: Basic realm="Authentication required"
+
+        Der Browser zeigt das Fenster zum Einloggen.
+        Der Client trägt die Zugangsdaten ein und klickt auf 'OK'
+
+        
+        2. Anfrage
+            http://localhost:8084/Security_Auth/user.jsp
+                Authorization: Basic dG9tOnRvbQ==
+
+        2. Antwort
+                200 OK
+
+        der Browser wird (bis er geschlossen wird) bei jeder weiteren Anfrage
+        zu http://localhost:8084/Security_Auth/* den Header 'Authorization' senden
+
+        </pre>
+        
+        
+        <h1>FORM</h1>
+        
+        <pre>
+
+        1. Anfrage:
+            http://localhost:8084/Security_Auth/user.jsp
+
+        1. Antwort:             (kommt von login.jsp)
+            HTTP/1.1 200 OK
+                Set-Cookie: JSESSIONID=D4435BA6CB56366BE9A75743E1F5ED98; Path=/Security_Auth/; HttpOnly
+
+        Das Formular (hier mit login.jsp) wird angezeigt
+        Der Client trägt die Zugangsdaten ein und klickt auf 'submit'-Button
+
+        2. Anfrage:
+            http://localhost:8084/Security_Auth/j_security_check
+                POST /Security_Auth/j_security_check HTTP/1.1
+                j_username=tom&j_password=tom
+                Cookie: JSESSIONID=D4435BA6CB56366BE9A75743E1F5ED98
+
+        2. HTTP/1.1 303 See Other
+            Location: http://localhost:8084/Security_Auth/user.jsp
+            
+
+        3. Anfrage
+            http://localhost:8084/Security_Auth/user.jsp
+                Cookie: JSESSIONID=D4435BA6CB56366BE9A75743E1F5ED98
+        3. Antwort
+            HTTP/1.1 200 OK
+                Set-Cookie: JSESSIONID=15AAE2286B3480576163135DDFAD8B2E; Path=/Security_Auth/; HttpOnly
+
 
         </pre>
         
