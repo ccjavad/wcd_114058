@@ -4,6 +4,15 @@
     <servlet>
         <servlet-name>ServletZugang</servlet-name>
         <servlet-class>svts.ServletZugang</servlet-class>
+        
+        <security-role-ref>
+            <description>
+                die isUserInRole soll true liefern, wenn sie als Argument
+                'manager' hat, aber der Request von User mit der Rolle 'regManager' kommt
+            </description>
+            <role-link>regManager</role-link>
+            <role-name>manager</role-name>
+        </security-role-ref>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletZugang</servlet-name>
@@ -19,14 +28,18 @@
     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
-            
-    <!--
+
     <security-role>
         <role-name>regUser</role-name>
     </security-role>
     <security-role>
         <role-name>regAdmin</role-name>
     </security-role>
+    <security-role>
+        <role-name>regManager</role-name>
+    </security-role>
+                        
+    <!--
     
     <security-constraint>
         <web-resource-collection>

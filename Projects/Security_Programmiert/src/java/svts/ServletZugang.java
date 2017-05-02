@@ -11,7 +11,6 @@ public class ServletZugang extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         //Exam: authenticate liefert false zurück, wen das Authentifizieren nicht
         //      vollständig ist (oder gar nicht)
         if( !request.authenticate(response) ) {
