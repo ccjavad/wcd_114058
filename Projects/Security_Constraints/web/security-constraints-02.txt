@@ -1,0 +1,23 @@
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/user.jsp</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+    
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/user.jsp</url-pattern>
+            <url-pattern>/admin.jsp</url-pattern>
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>regAdmin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Zugriff auf user.jsp ist JEDEM erlaubt (keine Autorisierung nötig)

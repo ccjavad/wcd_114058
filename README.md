@@ -1,11 +1,5 @@
 ### Morgen!
 
-# da wegen der Skype-Störung kein Unterricht möglich war, bleien die Aufgaben gleich
-# da wegen der Skype-Störung kein Unterricht möglich war, bleien die Aufgaben gleich
-# da wegen der Skype-Störung kein Unterricht möglich war, bleien die Aufgaben gleich
-
-## schönes Wochenende, bis Dienstag (Montag ist frei)
-
 ## Wissensvermittlung:
 - 08:00 - 09:30 Uhr
 - 11:30 - 12:15 Uhr
@@ -17,6 +11,9 @@
 ## Aufgaben:
 
 - Kapitel 12
+- Wie ist das Problem mit den geänderten Rollennamen zu lösen ohne das Servlet neu zu kompilieren?
+- Optional: transport-guarantee
+
 - security-constraint und die Konflikte bei gleichen Ressourcen
 - http-method in der web-resource-collection
 

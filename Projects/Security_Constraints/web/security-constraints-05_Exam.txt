@@ -1,0 +1,18 @@
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/user.jsp</url-pattern>
+            
+            <http-method-ommision>GET</http-method-ommision>
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>regUser</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Mit <http-method-ommision>GET</http-method-ommision> werden ALLE anderen 
+Http-Metzhoden außer GET gemeint
+

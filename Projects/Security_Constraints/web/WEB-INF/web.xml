@@ -27,18 +27,23 @@
         <web-resource-collection>
             <web-resource-name>CollUser</web-resource-name>
             <url-pattern>/user.jsp</url-pattern>
+            
+            <http-method>GET</http-method>
         </web-resource-collection>
         
         <auth-constraint>
             <role-name>regUser</role-name>
         </auth-constraint>
     </security-constraint>
-    
+
+        
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>CollUser</web-resource-name>
             <url-pattern>/user.jsp</url-pattern>
             <url-pattern>/admin.jsp</url-pattern>
+            
+            <http-method>POST</http-method>
         </web-resource-collection>
         
         <auth-constraint>

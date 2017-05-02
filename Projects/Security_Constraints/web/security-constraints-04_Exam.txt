@@ -1,0 +1,47 @@
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/user.jsp</url-pattern>
+            
+            <http-method>GET</http-method>
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>regUser</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+        
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/user.jsp</url-pattern>
+            <url-pattern>/admin.jsp</url-pattern>
+            
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>regAdmin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    Frage:  
+        Geregelt wird der Zugriff auf die user.jsp in zwei Security Constraints.
+        In der Anwendung gibt es Rollen: regUser, regAdmin und regManager
+        Was ist richtig?
+
+- regUser hat Zugriff auf user.jsp mit     GET     JA
+- regUser hat Zugriff auf user.jsp mit     POST    NEIN
+- regUser hat Zugriff auf user.jsp mit     PUT     JA
+
+- regAdmin hat Zugriff auf user.jsp mit    GET     NEIN
+- regAdmin hat Zugriff auf user.jsp mit    POST    JA
+- regAdmin hat Zugriff auf user.jsp mit    PUT     JA
+
+- regManager hat Zugriff auf user.jsp mit  GET     NEIN
+- regManager hat Zugriff auf user.jsp mit  POST    NEIN
+- regManager hat Zugriff auf user.jsp mit  PUT     JA
+
