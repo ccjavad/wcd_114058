@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <filter>
+        <filter-name>Simple</filter-name>
+        <filter-class>filter.SimpleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Simple</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- 
+            ******************************************
+            Bsp. Reihenfolge der Filter in einer Kette 
+            ******************************************
+    -->
+    <servlet>
+        <servlet-name>ServletWoche</servlet-name>
+        <servlet-class>woche.ServletWoche</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletWoche</servlet-name>
+        <url-pattern>/woche</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>Mo</filter-name>
+        <filter-class>woche.FilterMontag</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Di</filter-name>
+        <filter-class>woche.FilterDienstag</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Arbeitstage</filter-name>
+        <filter-class>woche.FilterArbeitstage</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Wochenende</filter-name>
+        <filter-class>woche.FilterWochenende</filter-class>
+    </filter>
+    
+    <!-- 
+        Die Reihenfolge der mappings bestimmt 
+        die Reihenfolge der Filter in der Kette 
+    -->
+    
+    <filter-mapping>
+        <filter-name>Arbeitstage</filter-name>
+        <servlet-name>ServletWoche</servlet-name>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>Mo</filter-name>
+        <url-pattern>/woche</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>Di</filter-name>
+        <url-pattern>/woche</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>Wochenende</filter-name>
+        <servlet-name>ServletWoche</servlet-name>
+    </filter-mapping>
+    
+</web-app>

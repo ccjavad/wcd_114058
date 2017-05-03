@@ -12,6 +12,8 @@
 
 - s. Projekt 'Sessions_Tracking'
 - Kapitel 13. Filter
+- Die Reihenfolge der Filter in der Kette
+- dispatcher aus filter-mapping?
 
 
 ## Kursinhalte:
