@@ -10,12 +10,9 @@
 
 ## Aufgaben:
 
-- Kapitel 12
-- Wie ist das Problem mit den geänderten Rollennamen zu lösen ohne das Servlet neu zu kompilieren?
-- Optional: transport-guarantee
+- s. Projekt 'Sessions_Tracking'
+- Kapitel 13. Filter
 
-- security-constraint und die Konflikte bei gleichen Ressourcen
-- http-method in der web-resource-collection
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
