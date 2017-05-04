@@ -5,7 +5,6 @@
             30
         </session-timeout>
     </session-config>
-    
     <filter>
         <filter-name>Simple</filter-name>
         <filter-class>filter.SimpleFilter</filter-class>
@@ -14,8 +13,14 @@
         <filter-name>Simple</filter-name>
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
-    
-    
+    <filter>
+        <filter-name>Unicode</filter-name>
+        <filter-class>filter.UnicodeRequestFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Unicode</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
     <!-- 
             ******************************************
             Bsp. Reihenfolge der Filter in einer Kette 
@@ -29,7 +34,6 @@
         <servlet-name>ServletWoche</servlet-name>
         <url-pattern>/woche</url-pattern>
     </servlet-mapping>
-    
     <filter>
         <filter-name>Mo</filter-name>
         <filter-class>woche.FilterMontag</filter-class>
@@ -46,30 +50,92 @@
         <filter-name>Wochenende</filter-name>
         <filter-class>woche.FilterWochenende</filter-class>
     </filter>
-    
     <!-- 
         Die Reihenfolge der mappings bestimmt 
-        die Reihenfolge der Filter in der Kette 
+        die Reihenfolge der Filter in der Kette.
+        
+        Zuerst die Filter, die mit url-patterns gemappt werden.
+        Danach die Filter, die mit servlet-name gemappt werden.
     -->
-    
     <filter-mapping>
         <filter-name>Arbeitstage</filter-name>
         <servlet-name>ServletWoche</servlet-name>
     </filter-mapping>
-    
     <filter-mapping>
         <filter-name>Mo</filter-name>
         <url-pattern>/woche</url-pattern>
     </filter-mapping>
-    
     <filter-mapping>
         <filter-name>Di</filter-name>
         <url-pattern>/woche</url-pattern>
     </filter-mapping>
-    
     <filter-mapping>
         <filter-name>Wochenende</filter-name>
         <servlet-name>ServletWoche</servlet-name>
     </filter-mapping>
+    <!-- 
+            ******************************************
+            Bsp. Dispatcher
+            ******************************************
+    -->
+    <servlet-mapping>
+        <servlet-name>ServletSource</servlet-name>
+        <url-pattern>/source</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletTarget</servlet-name>
+        <url-pattern>/target</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletSource</servlet-name>
+        <servlet-class>dispatcher.ServletSource</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletTarget</servlet-name>
+        <servlet-class>dispatcher.ServletTarget</servlet-class>
+    </servlet>
+    <filter>
+        <filter-name>F-Target</filter-name>
+        <filter-class>dispatcher.FilterTarget</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>F-Target</filter-name>
+        <url-pattern>/target</url-pattern>
+        <!--
+        Standardwert für dispatcher: REQUEST.
+        Nur direkte http-Anfragen werden damit gefiltert
+        
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+        <dispatcher>ASYNC</dispatcher>
+        -->
+    </filter-mapping>
+    
+    
+    <!-- 
+        ******************************************
+        Bsp. Wrapper
+        ******************************************
+    -->
+    <servlet>
+        <servlet-name>ServletText</servlet-name>
+        <servlet-class>wrapper.ServletText</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletText</servlet-name>
+        <url-pattern>/simpleText</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>Upper</filter-name>
+        <filter-class>wrapper.FilterUppercase</filter-class>
+    </filter>    
+    <filter-mapping>
+        <filter-name>Upper</filter-name>
+        <url-pattern>/simpleText</url-pattern>
+    </filter-mapping>
+    
     
 </web-app>
