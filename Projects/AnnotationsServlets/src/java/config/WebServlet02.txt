@@ -1,0 +1,11 @@
+
+<servlet>
+        <servlet-name>Servlet-Name</servlet-name>
+        <servlet-class>config.ServletImDD</servlet-class>
+        ...
+
+
+
+@WebServlet(name = "Servlet-Name")
+public class MyServlet ...
+

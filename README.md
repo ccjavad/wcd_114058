@@ -11,7 +11,11 @@
 ## Aufgaben:
 
 - Annotationen: http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_25_006.htm
-- Optional: Kapitel 11, Servlet-Annotationen
+- Kapitel 11, 
+- @WebServlet, @WebInitParam
+- @MultipartConfig
+- Optional: @WebListener
+- Optional: @WebFilter
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

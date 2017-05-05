@@ -1,0 +1,14 @@
+
+@WebServlet( urlPatterns = { "/servletMitAnn" } )
+
+    DASSELBE:
+
+@WebServlet( value = { "/servletMitAnn" } )
+
+    DASSELBE:
+
+@WebServlet( { "/servletMitAnn" } )
+
+    DASSELBE:
+
+@WebServlet( "/servletMitAnn" )

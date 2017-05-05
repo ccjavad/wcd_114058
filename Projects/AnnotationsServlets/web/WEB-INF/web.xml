@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <servlet>
+        <servlet-name>ServletImDD</servlet-name>
+        <servlet-class>config.ServletImDD</servlet-class>
+        
+        <async-supported>false</async-supported>
+        
+        <init-param>
+            <param-name>n1</param-name>
+            <param-value>v1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>n2</param-name>
+            <param-value>v2</param-value>
+        </init-param>
+        
+        <load-on-startup>1213</load-on-startup>
+
+        <!--        
+        <multipart-config>
+            ...
+        </multipart-config>
+        
+        <run-as>internalRoleName</run-as>
+        
+        <security-role-ref>
+            ...
+        </security-role-ref>
+        -->
+        
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ServletImDD</servlet-name>
+        <url-pattern>/servletImDD</url-pattern>
+        <url-pattern>/x/*</url-pattern>
+        <url-pattern>*.com</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
