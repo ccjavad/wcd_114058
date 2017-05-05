@@ -10,14 +10,8 @@
 
 ## Aufgaben:
 
-- Bitte das Companion-Buch bereit halten
-
-- Kapitel 13. Filter
-- Die Reihenfolge der Filter in der Kette
-- dispatcher aus filter-mapping
-- Wrapper
-- Optional: das Wrapper-Bsp. aus dem Headfirst vereinfacht nachbilden
-
+- Annotationen: http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_25_006.htm
+- Optional: Kapitel 11, Servlet-Annotationen
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
