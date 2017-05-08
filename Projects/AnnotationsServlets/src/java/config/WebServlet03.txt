@@ -16,12 +16,21 @@
         <load-on-startup>1213</load-on-startup>
 
         <!--        
+        ---------------------------------
+        Nachgebildet mit @MultipartConfig:
+        ---------------------------------
         <multipart-config>
             ...
         </multipart-config>
         
+        ---------------------------------
+        Nachgebildet mit @RunAs(“Admin”):
+        ---------------------------------
         <run-as>internalRoleName</run-as>
         
+        ---------------------------------
+        keine Annotation dafür:
+        ---------------------------------
         <security-role-ref>
             ...
         </security-role-ref>

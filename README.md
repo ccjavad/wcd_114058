@@ -10,12 +10,12 @@
 
 ## Aufgaben:
 
-- Annotationen: http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_25_006.htm
 - Kapitel 11, 
 - @WebServlet, @WebInitParam
 - @MultipartConfig
-- Optional: @WebListener
-- Optional: @WebFilter
+- @WebListener
+- @WebFilter (testen)
+- Optional: Webfragmente
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
