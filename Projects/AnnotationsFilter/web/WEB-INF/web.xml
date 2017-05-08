@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>FilterBelastung</filter-name>
+        <filter-class>filter.TargetFilterBelastung</filter-class>
+        
+        <async-supported>false</async-supported>
+        
+        <init-param>
+            <param-name>n1</param-name>
+            <param-value>v1</param-value>
+        </init-param>
+        
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>FilterBelastung</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+        
+        <!--
+        <servlet-name>Servlet-Name</servlet-name>
+        -->
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
 
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	 version="3.1">
+    <filter-mapping>
+        <filter-name>My Filter Name</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+        
     <session-config>
         <session-timeout>
             30

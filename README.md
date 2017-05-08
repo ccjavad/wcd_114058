@@ -15,7 +15,8 @@
 - @MultipartConfig
 - @WebListener
 - @WebFilter (testen)
-- Optional: Webfragmente
+
+- Webfragmente
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058

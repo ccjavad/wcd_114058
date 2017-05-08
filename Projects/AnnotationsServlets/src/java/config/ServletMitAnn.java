@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet( 
+    name = "My Servlet Name",
     urlPatterns = "/servletMitAnn",
     asyncSupported = false,
     loadOnStartup = 121314,
