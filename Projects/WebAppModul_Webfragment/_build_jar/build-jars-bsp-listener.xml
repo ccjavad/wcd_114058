@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="changeme" default="all" basedir=".">
+    <target name="all">
+        <!-- TODO define script. See Help menu or http://ant.apache.org/ -->
+        
+        <!--
+        <delete dir="jar_src_logfile"/>
+        <copyfile src="../build/web/WEB-INF/classes/listener/ListenerLogfile.class"
+            dest="jar_src_logfile/listener/ListenerLogfile.class" />
+        -->
+        
+        <delete file="frg_logfile.jar"/>
+        <jar destfile="frg_logfile.jar" basedir="jar_src_logfile"/>
+        
+        
+        <delete file="frg_stats.jar"/>
+        <jar destfile="frg_stats.jar" basedir="jar_src_stats"/>
+    </target>
+</project>

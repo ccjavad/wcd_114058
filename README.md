@@ -11,15 +11,14 @@
 ## Aufgaben:
 
 - Kapitel 11, 
-- @WebServlet, @WebInitParam
-- @MultipartConfig
-- @WebListener
-- @WebFilter (testen)
-
 - Webfragmente
+- jar mit META-INF/resources/
+- Programmierbares Registrieren/Konfigurieren
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
+- Klausur: 18.05. Dauer: 90 Min. Hilfsmittel: alle
+- Prüfung: 12.06
 
 ## Git mit Netbeans:
 - Nur einmal das Repo clonen: Team/Git/Clone...

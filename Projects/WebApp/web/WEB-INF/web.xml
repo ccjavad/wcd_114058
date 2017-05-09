@@ -27,4 +27,10 @@
         <extension>img</extension>
         <mime-type>application/octet-stream</mime-type>
     </mime-mapping>
+    
+    <absolute-ordering>
+        <name>frg_logfile</name>
+        <others/>
+    </absolute-ordering>
+    
 </web-app>
