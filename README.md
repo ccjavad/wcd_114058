@@ -14,6 +14,8 @@
 - Webfragmente
 - jar mit META-INF/resources/
 - Programmierbares Registrieren/Konfigurieren
+- addServlet/addListener/addFilter
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
