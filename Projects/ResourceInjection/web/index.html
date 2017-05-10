@@ -10,14 +10,37 @@
         <h1>Resource Injection</h1>
         
         <h2>@Resource</h2>
-        
         <a href="useDataSource">Das Servlet, das mit @Resource 
             eine DataSource-Injection bekommt</a>
         
         
-        <h2>Lebenszyklus von Injections</h2>
-        
+        <h2>Lebenszyklus von Injections: @PostConstruct, @PreDestroy</h2>
         <a href="injectionLebenszyklus">zum ServletInjectionLebenszyklus</a>
+        
+
+        <h2>Tag im DD: resource-ref</h2>
+        <!--
+            http://stackoverflow.com/questions/15064260/should-you-set-up-database-connection-properties-in-server-xml-or-context-xml
+        
+            <resource-ref>
+                <res-ref-name>jdbc/TestDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+            </resource-ref>
+        -->
+        
+        <h1>Eigene JNDI Einträge</h1>
+        <h2>Tag im DD: env-entry</h2>
+        <!--
+            Unterstützt: String, Wrapper-Typen (Integer, Long...), enums, Class
+        
+            <env-entry>
+                <env-entry-name>kursname</env-entry-name>
+                <env-entry-type>java.lang.String</env-entry-type>
+                <env-entry-value>OCEJWCD</env-entry-value>
+            </env-entry>
+        -->
+        <a href="testEnvEntry.jsp">test env-entry</a>
         
     </body>
 </html>
