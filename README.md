@@ -10,12 +10,9 @@
 
 ## Aufgaben:
 
-- Kapitel 11, 
-- Webfragmente
-- jar mit META-INF/resources/
-- Programmierbares Registrieren/Konfigurieren
-- addServlet/addListener/addFilter
-
+- Kapitel 12, 
+- @Resource (für Methoden auch)
+- @PostConstruct, @PreDestroy
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
