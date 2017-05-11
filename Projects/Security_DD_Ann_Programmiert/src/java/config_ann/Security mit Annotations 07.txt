@@ -1,0 +1,35 @@
+
+Authentifizierung, Autorisierung und Verschlüsselung nur für die 
+Zugriffe mit der GET-Methode aktivieren:
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/url1</url-pattern>
+            <url-pattern>/url2</url-pattern>
+
+            <http-method>GET</http-method>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>regAdmin</role-name>
+        </auth-constraint>
+
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+
+NACHGEBILDET für die Servlet-Urls:
+
+@ServletSecurity(
+    httpMethodConstraints = {
+        @HttpMethodConstraint(
+            value = "GET",
+            emptyRoleSemantic = ServletSecurity.EmptyRoleSemantic.PERMIT,
+            transportGuarantee = ServletSecurity.TransportGuarantee.CONFIDENTIAL,
+            rolesAllowed = { "regAdmin" }
+        )
+    }
+)

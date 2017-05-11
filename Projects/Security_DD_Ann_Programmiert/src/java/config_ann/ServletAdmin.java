@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import javax.annotation.security.DeclareRoles;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HttpConstraint;
+import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 @DeclareRoles( value = {"regAdmin", "roleName2"} )
 @ServletSecurity(
-    value = @HttpConstraint(
-        value = ServletSecurity.EmptyRoleSemantic.PERMIT,
-        transportGuarantee = ServletSecurity.TransportGuarantee.NONE,
-        rolesAllowed = {}
-    ),
-    httpMethodConstraints = {}
+    httpMethodConstraints = {
+        @HttpMethodConstraint(
+            value = "GET",
+            emptyRoleSemantic = ServletSecurity.EmptyRoleSemantic.PERMIT,
+            transportGuarantee = ServletSecurity.TransportGuarantee.CONFIDENTIAL,
+            rolesAllowed = { "regAdmin" }
+        )
+    }
 )
 @WebServlet("/admin")
 public class ServletAdmin extends HttpServlet {
@@ -39,4 +42,11 @@ public class ServletAdmin extends HttpServlet {
             out.println("</html>");
         }
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
+    
+    
 }

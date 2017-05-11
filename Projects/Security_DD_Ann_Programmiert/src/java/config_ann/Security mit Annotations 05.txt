@@ -1,0 +1,23 @@
+
+Authentifizierung und Autorisierung aktivieren:
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/url1</url-pattern>
+            <url-pattern>/url2</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>regAdmin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+NACHGEBILDET für die Servlet-Urls:
+
+@ServletSecurity(
+    @HttpConstraint(
+        rolesAllowed = { "regAdmin" }
+    )
+)

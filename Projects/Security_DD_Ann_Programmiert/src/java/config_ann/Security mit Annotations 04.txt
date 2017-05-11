@@ -1,4 +1,5 @@
-Zugriff auf die Urls freischalten:
+
+Zugriff auf die Urls sperren:
 
     <security-constraint>
         <web-resource-collection>
@@ -6,25 +7,16 @@ Zugriff auf die Urls freischalten:
             <url-pattern>/url1</url-pattern>
             <url-pattern>/url2</url-pattern>
         </web-resource-collection>
+
+        <auth-constraint/>
     </security-constraint>
 
 
 NACHGEBILDET für die Servlet-Urls:
 
-    @ServletSecurity
-
-ODER:
-
-    @ServletSecurity(
-        value = @HttpConstraint,
-        httpMethodConstraints = {}
-    )
-    
-ODER:
-
     @ServletSecurity(
         value = @HttpConstraint(
-            value = ServletSecurity.EmptyRoleSemantic.PERMIT,
+            value = ServletSecurity.EmptyRoleSemantic.DENY,
             transportGuarantee = ServletSecurity.TransportGuarantee.NONE,
             rolesAllowed = {}
         ),

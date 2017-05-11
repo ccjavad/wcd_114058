@@ -1,0 +1,23 @@
+
+Verschlüsselung aktivieren:
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/url1</url-pattern>
+            <url-pattern>/url2</url-pattern>
+        </web-resource-collection>
+
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+
+NACHGEBILDET für die Servlet-Urls:
+
+@ServletSecurity(
+    value = @HttpConstraint(
+        transportGuarantee = ServletSecurity.TransportGuarantee.CONFIDENTIAL,
+    )
+)
