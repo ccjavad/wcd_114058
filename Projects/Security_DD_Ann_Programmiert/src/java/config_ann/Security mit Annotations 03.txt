@@ -1,0 +1,33 @@
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>CollUser</web-resource-name>
+            <url-pattern>/url1</url-pattern>
+            <url-pattern>/url2</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
+
+NACHGEBILDET für die Servlet-Urls:
+
+    @ServletSecurity
+
+ODER:
+
+    @ServletSecurity(
+        value = @HttpConstraint,
+        httpMethodConstraints = {}
+    )
+    
+ODER:
+
+    @ServletSecurity(
+        value = @HttpConstraint(
+            value = ServletSecurity.EmptyRoleSemantic.PERMIT,
+            transportGuarantee = ServletSecurity.TransportGuarantee.NONE,
+            rolesAllowed = {}
+        ),
+        httpMethodConstraints = {}
+    )
+
+    

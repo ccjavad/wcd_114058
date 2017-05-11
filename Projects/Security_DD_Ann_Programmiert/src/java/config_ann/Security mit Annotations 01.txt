@@ -1,0 +1,9 @@
+
+    <security-role>
+        <role-name>regUser</role-name>
+        <role-name>roleName2</role-name>
+    </security-role>
+
+NACHGEBILDET:
+
+    @DeclareRoles( value = {"regAdmin", "roleName2"} )

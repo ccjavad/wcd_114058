@@ -10,13 +10,9 @@
 
 ## Aufgaben:
 
-- Kapitel 12, 
-- @Resource (für Methoden auch)
-- @PostConstruct, @PreDestroy
-- resource-ref
-- env-entry
-- Bitte in einer Webfragmentdatei env-entry definieren und dann in der Hauptanwendung lesen.
-- Bitte env-entry mit DENSELBEN Namen auch im DD definieren. Gibt es Konflikte? Welchen Wert bekommt man in der Hauptanwendung
+- Kapitel 21
+- Security-Annotationen: @ServletSecurity, @HttpConstraint, @HttpMethodConstraint
+
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
