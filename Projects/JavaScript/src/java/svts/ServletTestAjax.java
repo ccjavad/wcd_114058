@@ -7,6 +7,7 @@ package svts;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,6 +37,13 @@ public class ServletTestAjax extends HttpServlet {
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
+            String maxParam = request.getParameter("max");
+            int max = Integer.parseInt(maxParam);
+            
+            int value = new Random().nextInt(max);
+            
+            out.println("Zufallszahl zw. 0 bis " + max + ": " + value);
         }
     }
 

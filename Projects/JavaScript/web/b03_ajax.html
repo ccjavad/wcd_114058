@@ -9,12 +9,12 @@
             function testAjaxGet() {
                 var xmlhttp = new XMLHttpRequest();
                 
-                xmlhttp.open("GET", "testAjax", false);
+                xmlhttp.open("GET", "testAjax?max=100", false);
                 
                 xmlhttp.onreadystatechange = function () {
                     if( xmlhttp.readyState === 4 && xmlhttp.status === 200 ) {
                         var out = document.getElementById("id-out");
-                        out.innerHTML = "Antwort: 200";
+                        out.innerHTML = xmlhttp.responseText;
                     } else {
                         var out = document.getElementById("id-out");
                         out.innerHTML = "Antwort-Status: " + xmlhttp.status;
@@ -23,12 +23,32 @@
                 
                 xmlhttp.send();
             }
+            
+            function testAjaxPost() {
+                var xmlhttp = new XMLHttpRequest();
+                
+                xmlhttp.open("POST", "testAjax", false);
+                
+                xmlhttp.onreadystatechange = function () {
+                    if( xmlhttp.readyState === 4 && xmlhttp.status === 200 ) {
+                        var out = document.getElementById("id-out");
+                        out.innerHTML = xmlhttp.responseText;
+                    } else {
+                        var out = document.getElementById("id-out");
+                        out.innerHTML = "Antwort-Status: " + xmlhttp.status;
+                    }
+                };
+                
+                xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xmlhttp.send("max=30");
+            }            
         </script>
         
     </head>
     <body>
         
-        <a href="#" onclick="testAjaxGet()">Ajax-Anfrage</a>
+        <a href="#" onclick="testAjaxGet()">Ajax-Anfrage / GET</a> <br/>
+        <a href="#" onclick="testAjaxPost()">Ajax-Anfrage / POST</a> <br/>
         
         <div id="id-out"></div>
         
