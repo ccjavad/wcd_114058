@@ -11,7 +11,6 @@
 ## Aufgaben:
 
 - Kapitel 21
-- Security-Annotationen: @ServletSecurity, @HttpConstraint, @HttpMethodConstraint
 
 
 ## Kursinhalte:

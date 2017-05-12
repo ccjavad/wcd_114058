@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function testAjaxGet() {
+                var xmlhttp = new XMLHttpRequest();
+                
+                xmlhttp.open("GET", "testAjax", false);
+                
+                xmlhttp.onreadystatechange = function () {
+                    if( xmlhttp.readyState === 4 && xmlhttp.status === 200 ) {
+                        var out = document.getElementById("id-out");
+                        out.innerHTML = "Antwort: 200";
+                    } else {
+                        var out = document.getElementById("id-out");
+                        out.innerHTML = "Antwort-Status: " + xmlhttp.status;
+                    }
+                };
+                
+                xmlhttp.send();
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <a href="#" onclick="testAjaxGet()">Ajax-Anfrage</a>
+        
+        <div id="id-out"></div>
+        
+    </body>
+</html>
