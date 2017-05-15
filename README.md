@@ -11,7 +11,8 @@
 ## Aufgaben:
 
 - Kapitel 8
-
+- AsyncContext/dispatch und async. Zyklen?
+- API: AsyncListener
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
