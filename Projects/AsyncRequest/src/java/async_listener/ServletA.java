@@ -1,4 +1,4 @@
-package api;
+package async_listener;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,51 +9,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(
-    urlPatterns = {"/api"},
-    asyncSupported = true
-)
-public class ServletAsyncAPI extends HttpServlet {
+@WebServlet(name = "ServletA", 
+        urlPatterns = {"/servletA"},
+        asyncSupported = true)
+public class ServletA extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        AsyncContext asyncContext = request.startAsync(); //Exam!
-//        AsyncContext asyncContext = request.startAsync(requestWrapper, responseWrapper); //Exam?
-
-        Runnable asyncTask = new Runnable() {
-            @Override
-            public void run() {
-                //hier asynchron die Antwort definieren
-                
-                //Async. Behandlung beenden
-                asyncContext.complete(); //Exam!
-            }
-        };
+        //Containerspezifisch (nicht in der Prüfung:)
+        request.setAttribute("org.apache.catalina.ASYNC_SUPPORTED", true);
         
-        //entweder:
-        asyncContext.start(asyncTask); //Exam?
-        //oder:
-        //asyncContext.dispatch("/andere_resource");    //Exam!
+        AsyncContext asyncContext = request.startAsync();
+        
+        asyncContext.addListener(new MyAsyncListener());
+        
+        asyncContext.dispatch("/servletB");
         
     }
 
-/*
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletAsyncAPI</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletAsyncAPI at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    
-    */    
-    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

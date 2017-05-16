@@ -11,12 +11,12 @@
 ## Aufgaben:
 
 - Kapitel 8
-- AsyncContext/dispatch und async. Zyklen?
-- API: AsyncListener
+- Wdh.
+- Klausurvorbereitung
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
-- Klausur: 18.05. Dauer: 90 Min. Hilfsmittel: alle
+- Klausur: 18.05, 08:10 Uhr, Dauer: 90 Min. Hilfsmittel: alle
 - Prüfung: 12.06
 
 ## Git mit Netbeans:
