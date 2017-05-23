@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Userlist_with_Datasource">
+  <Resource auth="Container" 
+            driverClassName="org.gjt.mm.mysql.Driver" 
+            maxIdle="30" maxTotal="100" maxWaitMillis="10000" 
+            name="jdbc/UserDB"
+            type="javax.sql.DataSource" 
+            url="jdbc:mysql://localhost:3306/java_test" 
+            username="root" password="1234"/>
+  
+  <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="jdbc/UserDB"
+           localDataSource="true"
+           userTable="users" 
+           userNameCol="user_name" 
+           userCredCol="user_pass"
+           userRoleTable="user_roles" 
+           roleNameCol="role_name"/>
+</Context>

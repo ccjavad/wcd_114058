@@ -10,12 +10,12 @@
 
 ## Aufgaben:
 
-- Kapitel 8
-- Wdh.
-- Klausurvorbereitung
+- Prüfungsvorbereitung: Companion-Buch
 
 ## Kursinhalte:
 - https://github.com/ccjavad/wcd_114058
+- Fehler im HeadFirst-Buch: http://www.oreilly.com/catalog/errata.csp?isbn=9780596516680
+- Fehler im Companion-Buch: http://www.garnerpress.com/catalogue/BK0340/errata.html
 - Klausur: 18.05, 08:10 Uhr, Dauer: 90 Min. Hilfsmittel: alle
 - Prüfung: 12.06
 
