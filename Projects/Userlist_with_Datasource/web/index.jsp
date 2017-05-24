@@ -39,6 +39,7 @@
 
         - Kein Caching der Userdaten. Die Ansicht für Administratoren 
          (s. admin.jsp) fragt jede 2 Sek. danach ob die Liste aktualisiert wurde
+         (evtl. ServiceLocator)
         - Die Ansicht für Administratoren zeigt die komplette Accounts-Liste: 
           ein Problem mit großen Listen
         - SQL-Injections möglich. Usernamen und Passwörter werden ohne Kontrollen
