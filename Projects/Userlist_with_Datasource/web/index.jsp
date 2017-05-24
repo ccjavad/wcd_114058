@@ -43,6 +43,7 @@
           ein Problem mit großen Listen
         - SQL-Injections möglich. Usernamen und Passwörter werden ohne Kontrollen
           in die Datenbank übernommen
+        - SQL-Transaktionen fehlen
         - Fehlerbehandlung fehlt meistens
         ...
 
